@@ -9,7 +9,7 @@ Tworzenie Gier Wideo •  semestr III • nr albumu 3006
 ## Lista gier będących inspiracją
 
 ###  
-### ✅ 1. Relics of the fallen  [![itch.io](https://img.icons8.com/ios-glyphs/0.8x/itch-io.png)](https://crescentyr.itch.io/relics-of-the-fallen) [![Google Play](https://img.icons8.com/material-rounded/1x/google-play.png)](https://play.google.com/store/apps/details?id=com.crescentyr.relicsofthefallen)
+### ✅ 1. Relics of the fallen  [![itch.io](https://img.icons8.com/external-tal-revivo-bold-tal-revivo/0.95x/external-itch-a-website-for-users-to-host-sell-and-download-indie-video-games-logo-bold-tal-revivo.png)](https://crescentyr.itch.io/relics-of-the-fallen) [![Google Play](https://img.icons8.com/material-rounded/1x/google-play.png)](https://play.google.com/store/apps/details?id=com.crescentyr.relicsofthefallen)
 Turn-based dungeon crawler card game with roguelike elements.
  
 
@@ -24,7 +24,7 @@ Time survival game with rougelike elements.
  
 
 ###  
-### 4. Dawnville  [![itch.io](https://img.icons8.com/ios-glyphs/0.8x/itch-io.png)](https://sorensaket.itch.io/dawnville) 
+### 4. Dawnville  [![itch.io](https://img.icons8.com/external-tal-revivo-bold-tal-revivo/0.95x/external-itch-a-website-for-users-to-host-sell-and-download-indie-video-games-logo-bold-tal-revivo.png)](https://sorensaket.itch.io/dawnville) 
 Incremental fantasy tower defense. 
  
 
@@ -44,7 +44,7 @@ Sliding tile mathematical puzzle video game.
  
 
 ###  
-### 8. Vampire Survivors  [![itch.io](https://img.icons8.com/ios-glyphs/0.8x/itch-io.png)](https://poncle.itch.io/vampire-survivors) [![Steam](https://img.icons8.com/material-rounded/1x/steam-circled.png)](https://store.steampowered.com/app/1794680/Vampire_Survivors/)
+### 8. Vampire Survivors  [![itch.io](https://img.icons8.com/external-tal-revivo-bold-tal-revivo/0.95x/external-itch-a-website-for-users-to-host-sell-and-download-indie-video-games-logo-bold-tal-revivo.png)](https://poncle.itch.io/vampire-survivors) [![Steam](https://img.icons8.com/material-rounded/1x/steam-circled.png)](https://store.steampowered.com/app/1794680/Vampire_Survivors/)
 Roguelike shoot 'em up video game 
  
 
