@@ -5,7 +5,7 @@
 
 Poniżej przedstawiam listę 10 wybranych przeze mnie gier.
 
-Każda z pozycji ma `krótki opis gatunku`, do którego należy, link do filmu z przykładową rozgrywką (![Gameplay](https://img.icons8.com/material-rounded/0.5x/youtube-play.png) **Gameplay**), oraz linki do serwisów ![Google Play](https://img.icons8.com/material-rounded/0.6x/google-play.png) **Google Play**, ![Steam](https://img.icons8.com/material-rounded/0.6x/steam-circled.png) **Steam**, ![itch.io](https://img.icons8.com/external-tal-revivo-bold-tal-revivo/0.6x/external-itch-a-website-for-users-to-host-sell-and-download-indie-video-games-logo-bold-tal-revivo.png) **Itch.io** oraz ![Udemy](https://img.icons8.com/external-tal-revivo-bold-tal-revivo/0.6x/external-udemycom-is-an-online-learning-and-teaching-platform-logo-bold-tal-revivo.png) **Udemy**, na których są dostępne.
+Każda z pozycji ma `krótki opis gatunku`, do którego należy, link do filmu z rozgrywką (![Gameplay](https://img.icons8.com/material-rounded/0.5x/youtube-play.png) **Gameplay**), oraz linki do serwisów ![Google Play](https://img.icons8.com/material-rounded/0.6x/google-play.png) **Google Play**, ![Steam](https://img.icons8.com/material-rounded/0.6x/steam-circled.png) **Steam**, ![itch.io](https://img.icons8.com/external-tal-revivo-bold-tal-revivo/0.6x/external-itch-a-website-for-users-to-host-sell-and-download-indie-video-games-logo-bold-tal-revivo.png) **Itch.io** oraz ![Udemy](https://img.icons8.com/external-tal-revivo-bold-tal-revivo/0.6x/external-udemycom-is-an-online-learning-and-teaching-platform-logo-bold-tal-revivo.png) **Udemy**, na których są dostępne.
 
 Wstępnie wybrałem trzy tytuły, które chciałbym skonsultować, są to [Dungeon Cards](https://github.com/kubatokarski/wsf-tgkim#-1-dungeon-cards), [Endless Waves Survival](https://github.com/kubatokarski/wsf-tgkim#-2-endless-waves-survival) oraz [Beatstar](https://github.com/kubatokarski/wsf-tgkim#-3-beatstar). Każdy z tych tytułów reprezentuje inny gatunek i inny poziom skomplikowania. Opisałem w nich podstawowe mechaniki, które należałoby moim zdaniem zrealizować.
 
@@ -60,6 +60,7 @@ Wstępnie wybrałem trzy tytuły, które chciałbym skonsultować, są to [Dunge
 - detekcja inputu gracza, określanie trafionej ścieżki
 - system określania dokładności timingu i punktacji dla pojedynczych dźwięków
 - system określania dokładności timingu i punktacji dla dźwięków ciągłych
+- system określania dokładności timingu i punktacji dla akordów
 - system mnożników i punktacji
 - mechanika przerwania rozgrywki przy niewystarczająco dobrej grze
 - system tablicy highscore'ów
