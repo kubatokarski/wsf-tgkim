@@ -157,7 +157,17 @@ Storyboard placeholder
 
 # Bibliografia
 
-Bilbiografia placeholder
+### **Wybrane**
+
+placeholder
+
+### **Do sprawdzenia**
+
+- [ ] **The Unity Tutorial (If You Hate Tutorials)** by *Game Maker's Toolkit* ([link](https://www.youtube.com/watch?v=XtQMytORBmM))
+- [ ] **Unity Essentials** by *Unity Learn* ([link](https://learn.unity.com/pathway/unity-essentials))
+- [ ] **Junior Programmer** by *Unity Learn* ([link](https://learn.unity.com/pathway/junior-programmer))
+- [ ] **Vampire Survivors in Unity Tutorial** by *Greg Dev Stuff* ([link](https://www.youtube.com/playlist?list=PL0GUZtUkX6t7zQEcvKtdc0NvjVuVcMe6U))
+
 
 | [⏶ Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
