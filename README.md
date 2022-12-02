@@ -137,7 +137,9 @@ Wstępnie wybrałem trzy tytuły, które chciałbym skonsultować, są to [Dunge
 
 # Pitch
 
-Pitch placeholder
+#### **Vampire Survivors ✕ chaotic tower defense**
+
+> Walczysz z hordami przeciwników, budujesz mordercze budowle, które bezlitośnie atakują wszystko dookoła. Również Ciebie!
 
 | [⏶ Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
