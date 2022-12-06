@@ -8,7 +8,8 @@
 1. [Lista wybranych gier](https://github.com/kubatokarski/wsf-tgkim#lista-wybranych-10-gier)
 2. [Pitch](https://github.com/kubatokarski/wsf-tgkim#pitch)
 3. [Storyboard](https://github.com/kubatokarski/wsf-tgkim#storyboard)
-4. [Bibliografia](https://github.com/kubatokarski/wsf-tgkim#bibliografia)
+4. [Źródła wiedzy](https://github.com/kubatokarski/wsf-tgkim#%C5%BAr%C3%B3d%C5%82a-wiedzy)
+5. [Narzędzia](https://github.com/kubatokarski/wsf-tgkim#narz%C4%99dzia)
 
 # Lista wybranych 10 gier
 
@@ -137,9 +138,9 @@ Wstępnie wybrałem trzy tytuły, które chciałbym skonsultować, są to [Dunge
 
 # Pitch
 
-#### **Vampire Survivors ✕ chaotic tower defense**
+### **Vampire Survivors ✕ chaotic tower defense**
 
-> Walcz z hordami przeciwników różnoraką bronią. Buduj mordercze budowle, które bezlitośnie atakują wszystko dookoła. Również Ciebie!
+> Walcz z hordami przeciwników bronią i czarami. Buduj mordercze budowle, które bezlitośnie atakują wszystko dookoła. Również Ciebie!
 
 | [⏶ Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
@@ -148,26 +149,48 @@ Wstępnie wybrałem trzy tytuły, które chciałbym skonsultować, są to [Dunge
 
 # Storyboard
 
-Storyboard placeholder
+| ![Storyboard 01a](./Docs/Storyboard/storyboard_01a.png) | ![Storyboard 01a](./Docs/Storyboard/storyboard_01b.png) |
+| --- | --- |
+| ![Storyboard 01a](./Docs/Storyboard/storyboard_02a.png) | ![Storyboard 01a](./Docs/Storyboard/storyboard_02b.png) |
+| --- | --- |
+| ![Storyboard 01a](./Docs/Storyboard/storyboard_03a.png) | ![Storyboard 01a](./Docs/Storyboard/storyboard_03b.png) |
+| --- | --- |
+![Storyboard 01a](./Docs/Storyboard/storyboard_04a.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_04b.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_05a.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_05b.png)
 
 | [⏶ Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
 
 ###  
 
-# Bibliografia
+# Źródła wiedzy
 
-### **Wybrane**
+### ✅ **DONE**
+[**The Unity Tutorial (If You Hate Tutorials)**](https://www.youtube.com/watch?v=XtQMytORBmM) by *Game Maker's Toolkit*
+> Tutorial z podstawami Unity.  Przerobiony w całości. Dostępny w osobnym repozytorium: [WSF Flappy Birds](https://github.com/kubatokarski/wsf-flappy-birds)
+
+
+### 📋 **TODO**
 
 placeholder
 
-### **Do sprawdzenia**
+### ❓ **TO CHECK**
 
-- [ ] **The Unity Tutorial (If You Hate Tutorials)** by *Game Maker's Toolkit* ([link](https://www.youtube.com/watch?v=XtQMytORBmM))
-- [ ] **Unity Essentials** by *Unity Learn* ([link](https://learn.unity.com/pathway/unity-essentials))
-- [ ] **Junior Programmer** by *Unity Learn* ([link](https://learn.unity.com/pathway/junior-programmer))
-- [ ] **Vampire Survivors in Unity Tutorial** by *Greg Dev Stuff* ([link](https://www.youtube.com/playlist?list=PL0GUZtUkX6t7zQEcvKtdc0NvjVuVcMe6U))
+- [ ] [**Unity Essentials**](https://learn.unity.com/pathway/unity-essentials) by *Unity Learn*
+- [ ] [**Junior Programmer**](https://learn.unity.com/pathway/junior-programmer) by *Unity Learn* 
+- [ ] [**Vampire Survivors in Unity Tutorial**](https://www.youtube.com/playlist?list=PL0GUZtUkX6t7zQEcvKtdc0NvjVuVcMe6U)  by *Greg Dev Stuff* 
 
+
+| [⏶ Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
+| --- |
+
+###  
+
+# Narzędzia
+
+- [Markdown Editor](https://jbt.github.io/markdown-editor/) online'owy edytor Markdown z podglądem na żywo, który jest dużo bliższy temu jak github renderduje pliki README.md niż Dillinger.io 
 
 | [⏶ Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
