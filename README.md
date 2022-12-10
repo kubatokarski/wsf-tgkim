@@ -149,7 +149,16 @@ Wstępnie wybrałem trzy tytuły, które chciałbym skonsultować, są to [Dunge
 
 # Storyboard
 
-Storyboard placeholder
+![Storyboard 01a](./Docs/Storyboard/storyboard_01a.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_01b.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_02a.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_02b.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_03a.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_03b.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_04a.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_04b.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_05a.png)
+![Storyboard 01a](./Docs/Storyboard/storyboard_05b.png)
 
 | [⏶ Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
