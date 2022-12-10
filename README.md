@@ -149,6 +149,8 @@ Wstępnie wybrałem trzy tytuły, które chciałbym skonsultować, są to [Dunge
 
 # Storyboard
 
+Storyboard w wersji z wygodniejszym przełączaniem pomiędzy kolejnymi ekranami jest dostępny w **[Google Photos](https://photos.app.goo.gl/wU6PYTcbUVrxBLsn6)**
+
 | ![Storyboard 01a](./Docs/Storyboard/storyboard_01a.png) | ![Storyboard 01a](./Docs/Storyboard/storyboard_01b.png) |
 | --- | --- |
 
