@@ -151,14 +151,18 @@ Wstępnie wybrałem trzy tytuły, które chciałbym skonsultować, są to [Dunge
 
 | ![Storyboard 01a](./Docs/Storyboard/storyboard_01a.png) | ![Storyboard 01a](./Docs/Storyboard/storyboard_01b.png) |
 | --- | --- |
-| ![Storyboard 01a](./Docs/Storyboard/storyboard_02a.png) | ![Storyboard 01a](./Docs/Storyboard/storyboard_02b.png) |
+
+| ![Storyboard 02a](./Docs/Storyboard/storyboard_02a.png) | ![Storyboard 02b](./Docs/Storyboard/storyboard_02b.png) |
 | --- | --- |
-| ![Storyboard 01a](./Docs/Storyboard/storyboard_03a.png) | ![Storyboard 01a](./Docs/Storyboard/storyboard_03b.png) |
+
+| ![Storyboard 03a](./Docs/Storyboard/storyboard_03a.png) | ![Storyboard 03b](./Docs/Storyboard/storyboard_03b.png) |
 | --- | --- |
-![Storyboard 01a](./Docs/Storyboard/storyboard_04a.png)
-![Storyboard 01a](./Docs/Storyboard/storyboard_04b.png)
-![Storyboard 01a](./Docs/Storyboard/storyboard_05a.png)
-![Storyboard 01a](./Docs/Storyboard/storyboard_05b.png)
+
+| ![Storyboard 04a](./Docs/Storyboard/storyboard_04a.png) | ![Storyboard 04b](./Docs/Storyboard/storyboard_04b.png) |
+| --- | --- |
+
+| ![Storyboard 05a](./Docs/Storyboard/storyboard_05a.png) | ![Storyboard 5b](./Docs/Storyboard/storyboard_05b.png) |
+| --- | ---|
 
 | [⏶ Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
