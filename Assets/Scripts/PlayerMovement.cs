@@ -6,27 +6,32 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
-    
     public Rigidbody2D rb;
-
-    [SerializeField]
-    GameObject weapon;
-
-    Vector2 movement;
+    [SerializeField] GameObject weapon;
+    private Vector2 movementVector;
+    [HideInInspector] public float lastHorizontalVector;
+    [HideInInspector] public float lastVerticalVector;
 
     // Update is called once per frame
     void Update()
     {
         // Input
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movementVector.x = Input.GetAxisRaw("Horizontal");
+        movementVector.y = Input.GetAxisRaw("Vertical");
+
+        if( movementVector.x != 0 ) {
+            lastHorizontalVector = movementVector.x;
+        }
+        if( movementVector.y != 0 ) {
+            lastVerticalVector = movementVector.y;
+        }
     }
 
     // Default: 50 fps
     void FixedUpdate ()
     {
         // Movement
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movementVector * moveSpeed * Time.fixedDeltaTime);
         
         // TODO: change temp to something meaningful
         float temp = Input.GetAxisRaw("Horizontal");
