@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,5 +19,17 @@ public class Enemy : MonoBehaviour
     {
         Vector2 direction = (targetDestination.position - transform.position).normalized;
         rb.velocity = direction * speed;
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {    
+        if(collision.gameObject.GetComponent<Character>()) {
+            Attack();
+        }
+    }
+
+    private void Attack()
+    {
+        Debug.Log("Attacking player!");
     }
 }
