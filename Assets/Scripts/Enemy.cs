@@ -7,12 +7,14 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] Transform targetDestination;
     [SerializeField] float speed;
+    GameObject targetGameObject;
 
     Rigidbody2D rb;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        targetGameObject = targetDestination.gameObject;
     }
 
     private void  FixedUpdate() 
@@ -23,13 +25,13 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {    
-        if(collision.gameObject.GetComponent<Character>()) {
+        if(collision.gameObject == targetGameObject) {
             Attack();
         }
     }
 
     private void Attack()
     {
-        Debug.Log("Attacking player!");
+        //Debug.Log("Attacking player!");
     }
 }
