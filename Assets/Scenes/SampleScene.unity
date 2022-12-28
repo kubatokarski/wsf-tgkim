@@ -1093,7 +1093,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346079494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.7, z: 0}
+  m_LocalPosition: {x: 0.3, y: -0.6, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1454,8 +1454,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8e7f6560741f791bd1a3cda57bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToAttack: 2
   WhipAttackL: {fileID: 1346079494}
   WhipAttackR: {fileID: 2031689981}
+  whipAttackSize: {x: 2.8, y: 1.4}
+  axeDamage: 5
 --- !u!1001 &1801107595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1758,7 +1761,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031689981}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -0.7, z: 0}
+  m_LocalPosition: {x: -0.3, y: -0.6, z: 0}
   m_LocalScale: {x: -0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children: []

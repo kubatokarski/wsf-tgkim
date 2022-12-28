@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     [SerializeField] GameObject weapon;
     private Vector2 movementVector;
-    [HideInInspector] public float lastHorizontalVector;
+    [HideInInspector] public float lastHorizontalVector = 1;
     [HideInInspector] public float lastVerticalVector;
 
     // Update is called once per frame

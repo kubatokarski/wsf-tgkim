@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform targetDestination;
     [SerializeField] float speed;
     GameObject targetGameObject;
-
     Rigidbody2D rb;
+    [SerializeField] int hp = 4;
 
     private void Awake()
     {
@@ -33,5 +33,15 @@ public class Enemy : MonoBehaviour
     private void Attack()
     {
         //Debug.Log("Attacking player!");
+    }
+
+    public void TakeDamage (int damage) 
+    {
+        hp -= damage;
+        
+        if (hp < 1)
+        {
+            Destroy(gameObject);
+        }
     }
 }
