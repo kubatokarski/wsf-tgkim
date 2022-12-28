@@ -394,7 +394,7 @@ Transform:
   - {fileID: 2030669522}
   - {fileID: 1636645472}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &403960234
 Rigidbody2D:
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed50d7800b52e4b8eae884df8725eca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
   rb: {fileID: 403960234}
   weapon: {fileID: 2030669521}
   lastHorizontalVector: 0
@@ -1849,7 +1849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 227094804265599941, guid: 84fb1670e2ed8442fb4edf247d8c2b7e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 227094804265599941, guid: 84fb1670e2ed8442fb4edf247d8c2b7e, type: 3}
       propertyPath: m_LocalPosition.x

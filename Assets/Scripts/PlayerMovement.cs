@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float moveSpeed = 5f;
+    public float moveSpeed;
     public Rigidbody2D rb;
     [SerializeField] GameObject weapon;
     private Vector2 movementVector;
@@ -37,10 +37,13 @@ public class PlayerMovement : MonoBehaviour
         float temp = Input.GetAxisRaw("Horizontal");
         
         Vector3 rotateWeapon;
-        if (temp < 0) {
+        if (temp < 0)
+        {
             rotateWeapon = new Vector3(0f, 180f, 0f); 
             weapon.transform.eulerAngles = rotateWeapon;
-        } else if (temp >0) {
+        }
+        else if (temp >0)
+        {
             rotateWeapon = new Vector3(0f, 0f, 0f); 
             weapon.transform.eulerAngles = rotateWeapon;
         }

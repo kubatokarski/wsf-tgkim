@@ -15,9 +15,10 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         targetGameObject = targetDestination.gameObject;
+        speed = UnityEngine.Random.Range(0.3f, 1.2f);
     }
 
-    private void  FixedUpdate() 
+    private void FixedUpdate() 
     {
         Vector2 direction = (targetDestination.position - transform.position).normalized;
         rb.velocity = direction * speed;

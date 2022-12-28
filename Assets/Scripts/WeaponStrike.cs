@@ -12,7 +12,7 @@ public class WeaponStrike : MonoBehaviour
     [SerializeField] GameObject WhipAttackR;
 
     PlayerMovement playerMovement;
-    [SerializeField] Vector2 whipAttackSize = new Vector2(2f, 0.7f);
+    [SerializeField] Vector2 whipAttackSize = new Vector2(2.1f, 0.7f);
     [SerializeField] int axeDamage = 1;
 
     LineRenderer l;
