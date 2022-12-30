@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int maxHp = 100;
+    public int currentHp = 100;
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int damage)
     {
-        
+        currentHp -= damage;
+
+        if(currentHp <= 0)
+        {
+            Debug.Log("Character is dead. Game Over.");
+        }
     }
 }
