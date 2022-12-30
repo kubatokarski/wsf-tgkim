@@ -12,11 +12,7 @@ public class WeaponStrike : MonoBehaviour
     [SerializeField] GameObject WhipAttackR;
 
     PlayerMovement playerMovement;
-    Vector2 whipAttackSize = new Vector2(1.8f, 0.5f);
-    Vector2 whipAttackSizeModifier = new Vector2(0.9f, 0.95f);
     [SerializeField] int axeDamage = 1;
-
-    LineRenderer l;
 
     private void Awake ()
     {
@@ -24,7 +20,6 @@ public class WeaponStrike : MonoBehaviour
         playerMovement.lastHorizontalVector = 1;
         timer = timeToAttack;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -42,25 +37,37 @@ public class WeaponStrike : MonoBehaviour
         GameObject ActiveWhipAttack;
         Collider2D[] colliders;
 
-        WhipAttackPosition = WhipAttackR.transform.position;
+        Vector3 AttackDimensions = new Vector3(1.6f, 1.2f);
+
         if( playerMovement.lastHorizontalVector > 0) {
             ActiveWhipAttack = WhipAttackR;
         } else {
             ActiveWhipAttack = WhipAttackL;
-            WhipAttackPosition = WhipAttackL.transform.position - new Vector3((ActiveWhipAttack.GetComponent<SpriteRenderer>().bounds.max - ActiveWhipAttack.GetComponent<SpriteRenderer>().bounds.min).x, 0, 0) * whipAttackSizeModifier.x ;
         }
-        ActiveWhipAttack.SetActive(true);       
-     
-        DrawDebugRectangle (WhipAttackPosition,
-                            new Vector3(WhipAttackPosition.x, WhipAttackPosition.y, 0) + new Vector3(1.8f, 0, 0),
-                            new Vector3(WhipAttackPosition.x, WhipAttackPosition.y, 0) + new Vector3(0, 0.8f, 0),
-                            new Vector3(WhipAttackPosition.x, WhipAttackPosition.y, 0) + new Vector3(1.8f, 0.8f, 0),
-                            Color.red, 1);
 
-        colliders = Physics2D.OverlapBoxAll(WhipAttackPosition, new Vector2(1.8f, 0.8f), 0f);
-        Debug.DrawLine(WhipAttackPosition, WhipAttackPosition + new Vector2(1.8f, 0.8f), Color.red, 1);
+        WhipAttackPosition = ActiveWhipAttack.transform.position;
+        ActiveWhipAttack.SetActive(true);
 
+        colliders = Physics2D.OverlapBoxAll(new Vector2(WhipAttackPosition.x - 0.5f * AttackDimensions.x, WhipAttackPosition.y - 0.5f * AttackDimensions.y),
+                                            new Vector2(AttackDimensions.x, AttackDimensions.y), 0f);
         ApplyDamage(colliders);
+        
+        // DEBUG 
+        DrawDebugRectangle ( new Vector2(WhipAttackPosition.x - 0.5f * AttackDimensions.x, WhipAttackPosition.y - 0.5f * AttackDimensions.y),
+                             new Vector2(WhipAttackPosition.x + 0.5f * AttackDimensions.x, WhipAttackPosition.y - 0.5f * AttackDimensions.y),
+                             new Vector2(WhipAttackPosition.x - 0.5f * AttackDimensions.x, WhipAttackPosition.y + 0.5f * AttackDimensions.y),
+                             new Vector2(WhipAttackPosition.x + 0.5f * AttackDimensions.x, WhipAttackPosition.y + 0.5f * AttackDimensions.y), Color.red, 1 );
+        
+        drawCross(new Vector2(WhipAttackPosition.x - 0.5f * AttackDimensions.x, WhipAttackPosition.y - 0.5f * AttackDimensions.y), 0.05f, Color.white);
+        drawCross(new Vector2(WhipAttackPosition.x + 0.5f * AttackDimensions.x, WhipAttackPosition.y + 0.5f * AttackDimensions.y), 0.05f, Color.white);
+    }
+
+    private void drawCross (Vector3 position, float crossLength, Color col, float time = 1f)
+    {
+        Debug.DrawLine( new Vector3(position.x - crossLength, position.y - crossLength, 0), 
+                        new Vector3(position.x + crossLength, position.y + crossLength, 0), col, time);
+        Debug.DrawLine( new Vector3(position.x - crossLength, position.y + crossLength, 0), 
+                        new Vector3(position.x + crossLength, position.y - crossLength, 0), col, time);
     }
 
     private void ApplyDamage(Collider2D[] colliders)
