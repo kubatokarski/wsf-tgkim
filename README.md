@@ -198,13 +198,25 @@ Storyboard w wersji z wygodniejszym przełączaniem pomiędzy kolejnymi ekranami
 
 #### 3. [„**How did I learn to make Games?**”](https://www.youtube.com/watch?v=b3DOnigmLBY) *Imphenzia*
 - Obejrzany
-- Fragment od [0:10](https://youtu.be/b3DOnigmLBY?t=10) (do 3:01) z zaczynaniem od czegoś absolutnie podstawowego i stopniowe, inkrementalne zadawanie sobie pytania *'Can I?'* i w efekcie dodawanie kolejnych elementów gry oraz warstw rozgrywki jest imho rewelacyjny! ❤️ 
+- Fragment od [0:10](https://youtu.be/b3DOnigmLBY?t=10) (do 3:01) z zaczynaniem od czegoś absolutnie podstawowego i stopniowe, inkrementalne zadawanie sobie pytania *'Can I?'* i w efekcie dodawanie kolejnych elementów gry oraz warstw rozgrywki jest imho rewelacyjny! ❤️
+
+#### 4. [„Top down movement in Unity!”](https://www.youtube.com/watch?v=whzomFgjT50) *Brackeys*
+- Przerobiony w całości.
+- Podstawowy ruch postaci w grach top-down.
+
 
 ##
 
-### 📋 **TO DO**:
+### 📋 **IN PROGRESS**:
 
-#### - [TOP DOWN MOVEMENT in Unity!](https://www.youtube.com/watch?v=whzomFgjT50) *Brackeys*
+#### 1. [„**Vampire Survivors in Unity Tutorial**”](https://www.youtube.com/playlist?list=PL0GUZtUkX6t7zQEcvKtdc0NvjVuVcMe6U)  by *Greg Dev Stuff*
+- [x] **Episode 1 Movement and Camera**
+- [x] **Episode 2 Infinitely Scrolling level**
+- [x] **Episode 3 First enemy**
+- [x] **Episode 4 First weapon**
+- [ ] **Episode 5 HP and HP bar**
+
+Tutorial, który miał być podstawą do  całego projektu, ale okazał się średniej jakości i nie do końca tym czego oczekiwałem. Przerabiam całość, ale wybieram tylko część zawartych informacji oraz dodatkowo część zmieniam pod moją wizję gry.
 
 ##
 
@@ -212,7 +224,6 @@ Storyboard w wersji z wygodniejszym przełączaniem pomiędzy kolejnymi ekranami
 
 - [**Unity Essentials**](https://learn.unity.com/pathway/unity-essentials) by *Unity Learn*
 - [**Junior Programmer**](https://learn.unity.com/pathway/junior-programmer) by *Unity Learn* 
-- [**Vampire Survivors in Unity Tutorial**](https://www.youtube.com/playlist?list=PL0GUZtUkX6t7zQEcvKtdc0NvjVuVcMe6U)  by *Greg Dev Stuff* 
 
 | [Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
