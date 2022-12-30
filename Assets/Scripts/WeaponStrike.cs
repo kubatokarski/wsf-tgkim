@@ -13,7 +13,9 @@ public class WeaponStrike : MonoBehaviour
 
     PlayerMovement playerMovement;
     //[SerializeField] Vector2 whipAttackSize = new Vector2(1.0f, 0.7f);
-    Vector2 whipAttackSize = new Vector2(1.8f, 1f);
+    //Vector2 whipAttackSize = new Vector2(1.8f, 1f);
+    Vector2 whipAttackSize = new Vector2(1.8f, 0.5f);
+    Vector2 whipAttackSizeModifier = new Vector2(0.9f, 0.95f);
     [SerializeField] int axeDamage = 1;
 
     LineRenderer l;
@@ -37,36 +39,30 @@ public class WeaponStrike : MonoBehaviour
     private void Attack()
     {
         timer = timeToAttack;
+        Vector2 WhipAttackPosition; 
 
-        GameObject debugWhipAttack;
+        GameObject ActiveWhipAttack;
+        Collider2D[] colliders;
 
+        WhipAttackPosition = WhipAttackR.transform.position;
         if( playerMovement.lastHorizontalVector > 0) {
-            WhipAttackR.SetActive(true);
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(WhipAttackR.transform.position, whipAttackSize, 0f);
-            ApplyDamage(colliders);
-            
-            // DEBUG
-            debugWhipAttack = WhipAttackR;
+            ActiveWhipAttack = WhipAttackR;
         } else {
-            WhipAttackL.SetActive(true);
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(WhipAttackL.transform.position - new Vector3(whipAttackSize.x, 0, 0), whipAttackSize, 0f);
-            ApplyDamage(colliders);
-            
-            // DEBUG
-            debugWhipAttack = WhipAttackL;                 
+            ActiveWhipAttack = WhipAttackL;
+            WhipAttackPosition = WhipAttackL.transform.position - new Vector3((ActiveWhipAttack.GetComponent<SpriteRenderer>().bounds.max - ActiveWhipAttack.GetComponent<SpriteRenderer>().bounds.min).x, 0, 0) * whipAttackSizeModifier.x ;
         }
+        ActiveWhipAttack.SetActive(true);
+     
+        DrawDebugRectangle (WhipAttackPosition,
+                            new Vector3(WhipAttackPosition.x, WhipAttackPosition.y, 0) + new Vector3(1.8f, 0, 0),
+                            new Vector3(WhipAttackPosition.x, WhipAttackPosition.y, 0) + new Vector3(0, 0.8f, 0),
+                            new Vector3(WhipAttackPosition.x, WhipAttackPosition.y, 0) + new Vector3(1.8f, 0.8f, 0),
+                            Color.red, 1);
 
-        // DEBUG
-        Vector3 LeftBottom;
-        if (debugWhipAttack == WhipAttackR) {
-            LeftBottom  = debugWhipAttack.transform.position;
-        } else {
-            LeftBottom  = debugWhipAttack.transform.position - new Vector3(whipAttackSize.x, 0, 0);
-        }
-        Vector3 RightBottom = LeftBottom + new Vector3(whipAttackSize.x, 0,0);
-        Vector3 LeftTop     = LeftBottom + new Vector3(0, whipAttackSize.y, 0);
-        Vector3 RightTop    = LeftBottom + new Vector3(whipAttackSize.x, whipAttackSize.y, 0);
-        DrawDebugRectangle (LeftBottom, RightBottom, LeftTop, RightTop, Color.red, 1);
+        colliders = Physics2D.OverlapBoxAll(WhipAttackPosition, new Vector2(1.8f, 0.8f), 0f);
+        Debug.Log(ActiveWhipAttack);
+
+        ApplyDamage(colliders);
     }
 
     private void ApplyDamage(Collider2D[] colliders)
