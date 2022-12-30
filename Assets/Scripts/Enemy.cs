@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Transform targetDestination;
+    Transform targetDestination;
     [SerializeField] float speed;
     GameObject targetGameObject;
     Character targetCharacter;
@@ -17,8 +17,14 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        targetGameObject = targetDestination.gameObject;
+        //targetGameObject = targetDestination.gameObject;
         speed = UnityEngine.Random.Range(0.3f, 1.2f);
+    }
+
+    public void SetTarget(GameObject target)
+    {
+        targetGameObject = target;
+        targetDestination = target.transform;
     }
 
     private void FixedUpdate() 

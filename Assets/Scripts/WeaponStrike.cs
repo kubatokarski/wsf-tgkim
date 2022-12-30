@@ -12,8 +12,6 @@ public class WeaponStrike : MonoBehaviour
     [SerializeField] GameObject WhipAttackR;
 
     PlayerMovement playerMovement;
-    //[SerializeField] Vector2 whipAttackSize = new Vector2(1.0f, 0.7f);
-    //Vector2 whipAttackSize = new Vector2(1.8f, 1f);
     Vector2 whipAttackSize = new Vector2(1.8f, 0.5f);
     Vector2 whipAttackSizeModifier = new Vector2(0.9f, 0.95f);
     [SerializeField] int axeDamage = 1;
@@ -51,7 +49,7 @@ public class WeaponStrike : MonoBehaviour
             ActiveWhipAttack = WhipAttackL;
             WhipAttackPosition = WhipAttackL.transform.position - new Vector3((ActiveWhipAttack.GetComponent<SpriteRenderer>().bounds.max - ActiveWhipAttack.GetComponent<SpriteRenderer>().bounds.min).x, 0, 0) * whipAttackSizeModifier.x ;
         }
-        ActiveWhipAttack.SetActive(true);
+        ActiveWhipAttack.SetActive(true);       
      
         DrawDebugRectangle (WhipAttackPosition,
                             new Vector3(WhipAttackPosition.x, WhipAttackPosition.y, 0) + new Vector3(1.8f, 0, 0),
@@ -60,7 +58,7 @@ public class WeaponStrike : MonoBehaviour
                             Color.red, 1);
 
         colliders = Physics2D.OverlapBoxAll(WhipAttackPosition, new Vector2(1.8f, 0.8f), 0f);
-        Debug.Log(ActiveWhipAttack);
+        Debug.DrawLine(WhipAttackPosition, WhipAttackPosition + new Vector2(1.8f, 0.8f), Color.red, 1);
 
         ApplyDamage(colliders);
     }
