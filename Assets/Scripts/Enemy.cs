@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     GameObject targetGameObject;
     Character targetCharacter;
     Rigidbody2D rb;
-    [SerializeField] int hp = 999;
+    [SerializeField] int hp = 1;
     [SerializeField] int damage = 1;
 
 

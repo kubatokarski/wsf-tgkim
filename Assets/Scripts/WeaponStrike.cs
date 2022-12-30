@@ -12,7 +12,8 @@ public class WeaponStrike : MonoBehaviour
     [SerializeField] GameObject WhipAttackR;
 
     PlayerMovement playerMovement;
-    [SerializeField] Vector2 whipAttackSize = new Vector2(2.1f, 0.7f);
+    //[SerializeField] Vector2 whipAttackSize = new Vector2(1.0f, 0.7f);
+    Vector2 whipAttackSize = new Vector2(1.8f, 1f);
     [SerializeField] int axeDamage = 1;
 
     LineRenderer l;
@@ -21,6 +22,7 @@ public class WeaponStrike : MonoBehaviour
     {
         playerMovement = GetComponentInParent<PlayerMovement>();
         playerMovement.lastHorizontalVector = 1;
+        timer = timeToAttack;
     }
 
     // Update is called once per frame
@@ -34,28 +36,37 @@ public class WeaponStrike : MonoBehaviour
 
     private void Attack()
     {
-        //float xAttackMultiplier = 0.9f;
-        //float yAttackMultiplier = 0.9f;
-
         timer = timeToAttack;
+
+        GameObject debugWhipAttack;
 
         if( playerMovement.lastHorizontalVector > 0) {
             WhipAttackR.SetActive(true);
             Collider2D[] colliders = Physics2D.OverlapBoxAll(WhipAttackR.transform.position, whipAttackSize, 0f);
             ApplyDamage(colliders);
-            //DrawDebugLine(  new Vector3(WhipAttackR.transform.position.x, WhipAttackR.transform.position.y),
-            //                new Vector3(WhipAttackR.transform.position.x + WhipAttackR.GetComponent<SpriteRenderer>().bounds.size.x * xAttackMultiplier, WhipAttackR.transform.position.y + WhipAttackR.GetComponent<SpriteRenderer>().bounds.size.y));
-            //Debug.Log( "attack width: "  + (WhipAttackR.GetComponent<SpriteRenderer>().bounds.size.x * xAttackMultiplier) + 
-            //           "attack height: " + (WhipAttackR.GetComponent<SpriteRenderer>().bounds.size.y * yAttackMultiplier) );
+            
+            // DEBUG
+            debugWhipAttack = WhipAttackR;
         } else {
             WhipAttackL.SetActive(true);
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(WhipAttackL.transform.position, whipAttackSize, 0f);
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(WhipAttackL.transform.position - new Vector3(whipAttackSize.x, 0, 0), whipAttackSize, 0f);
             ApplyDamage(colliders);
-            //DrawDebugLine(  new Vector3(WhipAttackL.transform.position.x, WhipAttackL.transform.position.y),
-            //                new Vector3(WhipAttackL.transform.position.x - WhipAttackL.GetComponent<SpriteRenderer>().bounds.size.x * xAttackMultiplier, WhipAttackL.transform.position.y + WhipAttackL.GetComponent<SpriteRenderer>().bounds.size.y));
-            //Debug.Log( "attack width: "  + (WhipAttackL.GetComponent<SpriteRenderer>().bounds.size.x * xAttackMultiplier) + 
-            //           "attack height: " + (WhipAttackL.GetComponent<SpriteRenderer>().bounds.size.y * yAttackMultiplier) );                    
+            
+            // DEBUG
+            debugWhipAttack = WhipAttackL;                 
         }
+
+        // DEBUG
+        Vector3 LeftBottom;
+        if (debugWhipAttack == WhipAttackR) {
+            LeftBottom  = debugWhipAttack.transform.position;
+        } else {
+            LeftBottom  = debugWhipAttack.transform.position - new Vector3(whipAttackSize.x, 0, 0);
+        }
+        Vector3 RightBottom = LeftBottom + new Vector3(whipAttackSize.x, 0,0);
+        Vector3 LeftTop     = LeftBottom + new Vector3(0, whipAttackSize.y, 0);
+        Vector3 RightTop    = LeftBottom + new Vector3(whipAttackSize.x, whipAttackSize.y, 0);
+        DrawDebugRectangle (LeftBottom, RightBottom, LeftTop, RightTop, Color.red, 1);
     }
 
     private void ApplyDamage(Collider2D[] colliders)
@@ -70,17 +81,11 @@ public class WeaponStrike : MonoBehaviour
         }
     }
 
-    private void DrawDebugLine(Vector3 startPoint, Vector3 endPoint) {
-        if (l==null) {
-            l = gameObject.AddComponent<LineRenderer>();
-        }
-        
-        List<Vector3> pos = new List<Vector3>();
-        pos.Add(startPoint);
-        pos.Add(endPoint);
-        l.startWidth = 0.01f;
-        l.endWidth = 0.01f;
-        l.SetPositions(pos.ToArray());
-        l.useWorldSpace = true;
+    private void DrawDebugRectangle (Vector3 LB, Vector3 RB, Vector3 LT, Vector3 RT, Color color, float duration)
+    {
+        Debug.DrawLine(LB, RB, color, duration);
+        Debug.DrawLine(RB, RT, color, duration);
+        Debug.DrawLine(RT, LT, color, duration);
+        Debug.DrawLine(LT, LB, color, duration);
     }
 }

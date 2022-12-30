@@ -214,7 +214,8 @@ Storyboard w wersji z wygodniejszym przełączaniem pomiędzy kolejnymi ekranami
 - [x] **Episode 2 Infinitely Scrolling level**
 - [x] **Episode 3 First enemy**
 - [x] **Episode 4 First weapon**
-- [ ] **Episode 5 HP and HP bar**
+- [x] **Episode 5 HP and HP bar**
+- [ ] **Episode 6 Enemy Spawn**
 
 Tutorial, który miał być podstawą do  całego projektu, ale okazał się średniej jakości i nie do końca tym czego oczekiwałem. Przerabiam całość, ale wybieram tylko część zawartych informacji oraz dodatkowo część zmieniam pod moją wizję gry.
 
