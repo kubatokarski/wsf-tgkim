@@ -232,7 +232,8 @@ Tutorial, który miał być podstawą do  całego projektu, ale okazał się śr
 - [x] 7. **Health System**
 - [x] 8. **Making the Player Attack**
 - [x] 9. **Adding Enemies**
-- [ ] 10. **Adding Visual Indicators**
+- [x] 10. **Adding Visual Indicators**
+- [ ] 11. **Making an Enemy Spawner**
 
 ##
 
