@@ -218,7 +218,7 @@ Storyboard w wersji z wygodniejszym przełączaniem pomiędzy kolejnymi ekranami
 - [x] **Episode 6 Enemy Spawn**
 - [ ] **Episode 7 Health drops**
 
-Tutorial, który miał być podstawą do  całego projektu, ale okazał się średniej jakości i nie do końca tym czego oczekiwałem. Przerabiam całość, ale wybieram tylko część zawartych informacji oraz dodatkowo część zmieniam pod moją wizję gry.
+Kurs, który miał być podstawą do całego projektu, ale okazał się średniej jakości i nie do końca tym czego oczekiwałem. Przerabiam całość, ale wybieram tylko część zawartych informacji oraz dodatkowo część zmieniam pod moją wizję gry.
 
 ###
 
@@ -235,6 +235,9 @@ Tutorial, który miał być podstawą do  całego projektu, ale okazał się śr
 - [x] 10. **Adding Visual Indicators**
 - [x] 11. **Making an Enemy Spawner**
 - [ ] 12. **Creating Main Menu**
+- [x] 13. **Building the Game**
+
+Seria tutoriali, które teoretycznie przerabiają podstawy, ale robią to w dużo lepszy, sensowniejszy sposób niż pierwotnie wybrany kurs „Vampire Survivors in Unity Tutorial”. Przerabiając go, stworzyłem drugą wersję projektu (V2), która będzie stanowiła podstawę, do połączenia z elementami z wersji pierwszej oraz dalszymi customizacjami i zmianami z mojej strony.
 
 ##
 
