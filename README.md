@@ -224,6 +224,7 @@ Tutorial, który miał być podstawą do  całego projektu, ale okazał się śr
 
 ### ❓ **TO CHECK**:
 
+- [**Unity Beginner Tutorials**](https://www.youtube.com/watch?v=XVsdrIqhMUg&list=PLKGarocXCE1H7pJk6k_CSwS359mtt3MVI) by *Modding by Kaupenjoe*
 - [**Unity Essentials**](https://learn.unity.com/pathway/unity-essentials) by *Unity Learn*
 - [**Junior Programmer**](https://learn.unity.com/pathway/junior-programmer) by *Unity Learn* 
 
