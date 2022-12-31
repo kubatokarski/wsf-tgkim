@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01365e1e082a34128a316001db7d08a6, type: 3}
   m_Name: BigSwarmer
   m_EditorClassIdentifier: 
-  hp: 55
-  damage: 25
-  speed: 0.4
+  hp: 25
+  damage: 30
+  speed: 0.1
