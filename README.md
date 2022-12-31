@@ -183,24 +183,24 @@ Storyboard w wersji z wygodniejszym przełączaniem pomiędzy kolejnymi ekranami
 # Źródła wiedzy
 
 ### ✅ **DONE**:
-#### 1. [„**The Unity Tutorial For Complete Beginners**”](https://www.youtube.com/watch?v=XtQMytORBmM) *Game Maker's Toolkit*
+#### 1. [„**The Unity Tutorial For Complete Beginners**”](https://www.youtube.com/watch?v=XtQMytORBmM) by *Game Maker's Toolkit*
 - Tutorial z podstawami Unity.  Przerobiony w całości.
 - Stworzony projekt dostępny w osobnym repozytorium: [**WSF Flappy Birds ↗️**](https://github.com/kubatokarski/wsf-flappy-birds)
 
 
 ###
 
-#### 2. [„**Re: The Unity Tutorial For Complete Beginners - Advanced Concepts”**](https://www.youtube.com/watch?v=0_UiF-4-7xM) *Code Monkey*
+#### 2. [„**Re: The Unity Tutorial For Complete Beginners - Advanced Concepts”**](https://www.youtube.com/watch?v=0_UiF-4-7xM) by *Code Monkey*
 - Obejrzany
 - Wniosek: nawet jeżeli czegoś się nauczysz, nawet absolutnych podstaw Unity, z bardzo niedawno opublikowanego tutoriala, to i tak momentalnie okaże się, że połowa właśnie zdobytej wiedzy jest nieaktualna, można osiągnąć te same efekty w bardziej *„profesjonalny”* sposób i ogólnie powinno się zacząć od nowa i nauczyć jeszcze raz, ale w bardziej prawilnej wersji... 😐
 
 ###
 
-#### 3. [„**How did I learn to make Games?**”](https://www.youtube.com/watch?v=b3DOnigmLBY) *Imphenzia*
+#### 3. [„**How did I learn to make Games?**”](https://www.youtube.com/watch?v=b3DOnigmLBY) by *Imphenzia*
 - Obejrzany
 - Fragment od [0:10](https://youtu.be/b3DOnigmLBY?t=10) (do 3:01) z zaczynaniem od czegoś absolutnie podstawowego i stopniowe, inkrementalne zadawanie sobie pytania *'Can I?'* i w efekcie dodawanie kolejnych elementów gry oraz warstw rozgrywki jest imho rewelacyjny! ❤️
 
-#### 4. [„Top down movement in Unity!”](https://www.youtube.com/watch?v=whzomFgjT50) *Brackeys*
+#### 4. [„Top down movement in Unity!”](https://www.youtube.com/watch?v=whzomFgjT50) by *Brackeys*
 - Przerobiony w całości.
 - Podstawowy ruch postaci w grach top-down.
 
@@ -209,7 +209,7 @@ Storyboard w wersji z wygodniejszym przełączaniem pomiędzy kolejnymi ekranami
 
 ### 📋 **IN PROGRESS**:
 
-#### 1. [„**Vampire Survivors in Unity Tutorial**”](https://www.youtube.com/playlist?list=PL0GUZtUkX6t7zQEcvKtdc0NvjVuVcMe6U)  by *Greg Dev Stuff*
+#### 1. [„**Vampire Survivors in Unity Tutorial**”](https://www.youtube.com/playlist?list=PL0GUZtUkX6t7zQEcvKtdc0NvjVuVcMe6U) by *Greg Dev Stuff*
 - [x] **Episode 1 Movement and Camera**
 - [x] **Episode 2 Infinitely Scrolling level**
 - [x] **Episode 3 First enemy**
@@ -219,6 +219,16 @@ Storyboard w wersji z wygodniejszym przełączaniem pomiędzy kolejnymi ekranami
 - [ ] **Episode 7 Health drops**
 
 Tutorial, który miał być podstawą do  całego projektu, ale okazał się średniej jakości i nie do końca tym czego oczekiwałem. Przerabiam całość, ale wybieram tylko część zawartych informacji oraz dodatkowo część zmieniam pod moją wizję gry.
+
+###
+
+#### 2. [„**Unity Beginner Tutorials**”](https://www.youtube.com/watch?v=XVsdrIqhMUg&list=PLKGarocXCE1H7pJk6k_CSwS359mtt3MVI) by *Modding by Kaupenjoe*
+- [x] **From Download to First Project**
+- [x] **Write your first script in Unity**
+- [x] **Input by pressing buttons!**
+- [x] **Mouse Inputs & Mouse Position in Unity**
+- [x] **Adding Sprites (and where to find them)**
+- [ ] **Making the Player move**
 
 ##
 
@@ -233,9 +243,12 @@ Tutorial, który miał być podstawą do  całego projektu, ale okazał się śr
 
 ###  
 
-# Narzędzia
+# Narzędzia & Assety
 
-- [Markdown Editor](https://jbt.github.io/markdown-editor/) online'owy edytor Markdown z podglądem na żywo, który jest dużo bliższy temu jak github renderduje pliki README.md niż Dillinger.io 
+- [Markdown Editor](https://jbt.github.io/markdown-editor/) online'owy edytor Markdown z podglądem na żywo, który jest dużo bliższy temu jak github renderduje pliki README.md niż Dillinger.io
+- https://o-lobster.itch.io/simple-dungeon-crawler-16x16-pixel-pack
+- https://www.kenney.nl/assets
+
 
 | [Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
