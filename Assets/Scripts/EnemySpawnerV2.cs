@@ -4,29 +4,34 @@ using UnityEngine;
 
 public class EnemySpawnerV2 : MonoBehaviour
 {
-    [SerializeField] private GameObject swarmerPrefab;
-    [SerializeField] private GameObject bigSwarmerPrefab;
+    [SerializeField] private GameObject enemyGoblinPrefab;
+    [SerializeField] private GameObject enemyGoblinBigPrefab;
     private int initialSpawnAmount = 3;
 
-    [SerializeField] private float swarmerInterval = 3.5f;
-    [SerializeField] private float bigSwarmerInterval = 10f;
+    [SerializeField] private float enemyGoblinInterval;
+    [SerializeField] private float enemyGoblinBigInterval;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(spawnEnemy(swarmerInterval, swarmerPrefab));
         for(int i=0; i<initialSpawnAmount; i++)
         {
-            spawnInitialEnemy(swarmerPrefab);
+            spawnInitialEnemy(enemyGoblinPrefab);
         }
+        StartCoroutine(spawnEnemy(enemyGoblinInterval, enemyGoblinPrefab));
         //StartCoroutine(spawnEnemy(bigSwarmerInterval, bigSwarmerPrefab));
     }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
+        float safeDistance = 10.5f;
+        float maxX = 12f;
+        float maxY = 6f;
+
         yield return new WaitForSeconds(interval);
-        GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 4f), 0), Quaternion.identity);
+        Vector2 spawnPosition = RandomRangeClamped(maxX, maxY, safeDistance);
+        GameObject newEnemy = Instantiate(enemy, new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
         newEnemy.transform.parent = this.transform;
         StartCoroutine(spawnEnemy(interval, enemy));
     }
@@ -49,15 +54,10 @@ public class EnemySpawnerV2 : MonoBehaviour
         result.y = Random.Range(-maxY, maxY);
         if(result.magnitude < min)
         {
-            float modifyXorY = Random.value;
+            float ySign = Mathf.Sign(result.y);
+            result = result.normalized * min;
+            result.y = ySign * maxY;
 
-            if (modifyXorY > 0.5)
-            {
-                result.x += Mathf.Sign(result.x) * min;
-            } else
-            {
-                result.y += Mathf.Sign(result.y) * min;
-            }
         }
         return result;
 
