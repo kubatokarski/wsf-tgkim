@@ -230,6 +230,7 @@ Tutorial, który miał być podstawą do  całego projektu, ale okazał się śr
 - [x] **Adding Sprites (and where to find them)**
 - [x] **Making the Player move**
 - [x] **Health System**
+- [ ] **Making the Player Attack**
 
 ##
 

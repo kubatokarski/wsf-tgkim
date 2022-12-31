@@ -12,12 +12,12 @@ public class Health : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            Damage(10);
+            //Damage(10);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Heal(10);
+            //Heal(10);
         }
 
     }
