@@ -9,7 +9,7 @@
 2. [Pitch](https://github.com/kubatokarski/wsf-tgkim#pitch)
 3. [Storyboard](https://github.com/kubatokarski/wsf-tgkim#storyboard)
 4. [Źródła wiedzy](https://github.com/kubatokarski/wsf-tgkim#%C5%BAr%C3%B3d%C5%82a-wiedzy)
-5. [Narzędzia](https://github.com/kubatokarski/wsf-tgkim#narz%C4%99dzia)
+5. [Narzędzia & Assety](https://github.com/kubatokarski/wsf-tgkim#narz%C4%99dzia--assety)
 
 # Lista wybranych 10 gier
 
@@ -223,14 +223,16 @@ Tutorial, który miał być podstawą do  całego projektu, ale okazał się śr
 ###
 
 #### 2. [„**Unity Beginner Tutorials**”](https://www.youtube.com/watch?v=XVsdrIqhMUg&list=PLKGarocXCE1H7pJk6k_CSwS359mtt3MVI) by *Modding by Kaupenjoe*
-- [x] **From Download to First Project**
-- [x] **Write your first script in Unity**
-- [x] **Input by pressing buttons!**
-- [x] **Mouse Inputs & Mouse Position in Unity**
-- [x] **Adding Sprites (and where to find them)**
-- [x] **Making the Player move**
-- [x] **Health System**
-- [ ] **Making the Player Attack**
+- [x] 1. **From Download to First Project**
+- [x] 2. **Write your first script in Unity**
+- [x] 3. **Input by pressing buttons!**
+- [x] 4. **Mouse Inputs & Mouse Position in Unity**
+- [x] 5. **Adding Sprites (and where to find them)**
+- [x] 6. **Making the Player move**
+- [x] 7. **Health System**
+- [x] 8. **Making the Player Attack**
+- [x] 9. **Adding Enemies**
+- [ ] 10. **Adding Visual Indicators**
 
 ##
 
