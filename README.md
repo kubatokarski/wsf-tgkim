@@ -228,7 +228,8 @@ Tutorial, który miał być podstawą do  całego projektu, ale okazał się śr
 - [x] **Input by pressing buttons!**
 - [x] **Mouse Inputs & Mouse Position in Unity**
 - [x] **Adding Sprites (and where to find them)**
-- [ ] **Making the Player move**
+- [x] **Making the Player move**
+- [x] **Health System**
 
 ##
 
