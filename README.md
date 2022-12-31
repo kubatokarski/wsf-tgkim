@@ -233,7 +233,8 @@ Tutorial, który miał być podstawą do  całego projektu, ale okazał się śr
 - [x] 8. **Making the Player Attack**
 - [x] 9. **Adding Enemies**
 - [x] 10. **Adding Visual Indicators**
-- [ ] 11. **Making an Enemy Spawner**
+- [x] 11. **Making an Enemy Spawner**
+- [ ] 12. **Creating Main Menu**
 
 ##
 
