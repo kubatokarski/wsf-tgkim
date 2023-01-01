@@ -6,10 +6,14 @@ public class EnemySpawnerV2 : MonoBehaviour
 {
     [SerializeField] private GameObject enemyGoblinPrefab;
     [SerializeField] private GameObject enemyGoblinBigPrefab;
+    [SerializeField] private GameObject enemyBatPrefab;
     private int initialSpawnAmount = 3;
 
     [SerializeField] private float enemyGoblinInterval;
     [SerializeField] private float enemyGoblinBigInterval;
+    [SerializeField] private float enemyBatInterval;
+
+    [SerializeField] private float intervalVariation = 0.5f;
 
 
     // Start is called before the first frame update
@@ -19,8 +23,15 @@ public class EnemySpawnerV2 : MonoBehaviour
         {
             spawnInitialEnemy(enemyGoblinPrefab);
         }
+        for (int i = 0; i < initialSpawnAmount * 1.5f; i++)
+        {
+            spawnInitialEnemy(enemyBatInterval);
+        }
+
         StartCoroutine(spawnEnemy(enemyGoblinInterval, enemyGoblinPrefab));
         //StartCoroutine(spawnEnemy(bigSwarmerInterval, bigSwarmerPrefab));
+
+
     }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
@@ -29,7 +40,11 @@ public class EnemySpawnerV2 : MonoBehaviour
         float maxX = 12f;
         float maxY = 6f;
 
-        yield return new WaitForSeconds(interval);
+        float currentInterval = interval + 1 + Random.Range(-intervalVariation, intervalVariation);
+
+        Debug.Log(currentInterval);
+
+        yield return new WaitForSeconds(currentInterval);
         Vector2 spawnPosition = RandomRangeClamped(maxX, maxY, safeDistance);
         GameObject newEnemy = Instantiate(enemy, new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
         newEnemy.transform.parent = this.transform;

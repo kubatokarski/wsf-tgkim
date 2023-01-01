@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4853244115531225660}
   - component: {fileID: 4853244115531225657}
   m_Layer: 0
-  m_Name: EnemyGoblin
+  m_Name: EnemyBatV2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 79fad954a16904a5480bfb26947211e3, type: 3}
+  m_Sprite: {fileID: -357518329, guid: aaef530e70bdd46dcad565a8e6470e86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,11 +155,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4853244115531225651}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68b34724b0a1444b3af224b2cae38ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  speed: 1.5
+  damage: 1
+  speed: 3
   data: {fileID: 11400000, guid: 2d6f330e13966422fa65e07f16d1b99a, type: 2}
