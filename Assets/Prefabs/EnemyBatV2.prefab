@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4853244115531225661}
   - component: {fileID: 4853244115531225660}
   - component: {fileID: 4853244115531225657}
+  - component: {fileID: 5434376458171965597}
   m_Layer: 0
   m_Name: EnemyBatV2
   m_TagString: Untagged
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd13295ab8d344beea543d304e42a1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 12
+  health: 1
 --- !u!61 &4853244115531225660
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -161,5 +162,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 3
-  data: {fileID: 11400000, guid: 2d6f330e13966422fa65e07f16d1b99a, type: 2}
+  speed: 1
+  data: {fileID: 11400000, guid: 79ff35e9bf59b413bb64dc05d472bc05, type: 2}
+--- !u!95 &5434376458171965597
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4853244115531225651}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 850c2bc0ea4f5487388ba1ff5c7621ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

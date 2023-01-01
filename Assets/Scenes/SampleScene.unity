@@ -1212,6 +1212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBatV2
       objectReference: {fileID: 0}
+    - target: {fileID: 4853244115531225651, guid: 025e4c321dbb848439bb5c8cd5ef4de8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4853244115531225656, guid: 025e4c321dbb848439bb5c8cd5ef4de8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1257,11 +1261,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4853244115531225657, guid: 025e4c321dbb848439bb5c8cd5ef4de8, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 79ff35e9bf59b413bb64dc05d472bc05, type: 2}
+    - target: {fileID: 4853244115531225657, guid: 025e4c321dbb848439bb5c8cd5ef4de8, type: 3}
       propertyPath: speed
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4853244115531225657, guid: 025e4c321dbb848439bb5c8cd5ef4de8, type: 3}
       propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853244115531225661, guid: 025e4c321dbb848439bb5c8cd5ef4de8, type: 3}
+      propertyPath: health
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

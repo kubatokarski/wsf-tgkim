@@ -19,13 +19,13 @@ public class EnemySpawnerV2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(int i=0; i<initialSpawnAmount; i++)
+        for (int i = 0; i < initialSpawnAmount; i++)
         {
             spawnInitialEnemy(enemyGoblinPrefab);
         }
         for (int i = 0; i < initialSpawnAmount * 1.5f; i++)
         {
-            spawnInitialEnemy(enemyBatInterval);
+            spawnInitialEnemy(enemyBatPrefab);
         }
 
         StartCoroutine(spawnEnemy(enemyGoblinInterval, enemyGoblinPrefab));
@@ -67,6 +67,7 @@ public class EnemySpawnerV2 : MonoBehaviour
         Vector2 result = new Vector2();
         result.x = Random.Range(-maxX, maxX);
         result.y = Random.Range(-maxY, maxY);
+
         if(result.magnitude < min)
         {
             float ySign = Mathf.Sign(result.y);
@@ -74,8 +75,8 @@ public class EnemySpawnerV2 : MonoBehaviour
             result.y = ySign * maxY;
 
         }
-        return result;
 
+        return result;
     }
 
 }
