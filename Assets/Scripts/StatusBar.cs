@@ -14,6 +14,7 @@ public class StatusBar : MonoBehaviour
         {
             state = 0f;
         }
+        //bar.transform.localScale = new Vector3(characterDirectionX * state, 1f, 1f);
         bar.transform.localScale = new Vector3(state, 1f, 1f);
     }
 }

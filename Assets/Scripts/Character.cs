@@ -16,6 +16,7 @@ public class Character : MonoBehaviour
         {
             Debug.Log("Character is dead. Game Over.");
         }
+
         hpBar.SetState(currentHp, maxHp);
     }
 

@@ -5,8 +5,9 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int health = 1;
+    [SerializeField] StatusBar hpBar;
 
-    private int MAX_HEALTH = 100;
+    private int MAX_HEALTH = 40;
 
     void Update()
     {
@@ -24,7 +25,8 @@ public class Health : MonoBehaviour
 
     public void SetHealth(int maxHealth, int health)
     {
-        this.MAX_HEALTH = maxHealth;
+        //this.MAX_HEALTH = maxHealth;
+        this.MAX_HEALTH = health;
         this.health = health;
     }
 
@@ -44,6 +46,11 @@ public class Health : MonoBehaviour
         }
 
         this.health -= amount;
+        if(this.hpBar != null)
+        {
+            //this.hpBar.SetState(this.health, this.MAX_HEALTH, this.transform.localScale.x);
+            this.hpBar.SetState(this.health, this.MAX_HEALTH);
+        }
         StartCoroutine(VisualIndicator(Color.red));
 
         if(health <= 0)

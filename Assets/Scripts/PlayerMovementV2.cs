@@ -8,7 +8,7 @@ public class PlayerMovementV2 : MonoBehaviour
 
     private Rigidbody2D body;
     private Vector2 axisMovement;
-
+    [SerializeField] Transform bar;
 
     void Start()
     {
@@ -39,14 +39,14 @@ public class PlayerMovementV2 : MonoBehaviour
 
         if (movingLeft)
         {
-            transform.localScale = new Vector3(-1f, transform.localScale.y); 
+            transform.localScale = new Vector3(-1f, transform.localScale.y);
+            bar.localScale = new Vector3(-1f, bar.localScale.y);
         }
 
         if (movingRight)
         {
-            transform.localScale = new Vector3(1f, transform.localScale.y); 
+            transform.localScale = new Vector3(1f, transform.localScale.y);
+            bar.localScale = new Vector3(1f, bar.localScale.y);
         }
-
-
     }
 }
