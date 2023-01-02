@@ -27,13 +27,14 @@ public class EnemyV2 : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
+    //private void OnTriggerStay2D(Collider2D collider)
     {
         if(collider.CompareTag("Player"))
         {
             if(collider.GetComponent<Health>() != null)
             {
                 collider.GetComponent<Health>().Damage(damage);
-                this.GetComponent<Health>().Damage(10000);
+                //this.GetComponent<Health>().Damage(10000);
             }
         }
     }
