@@ -35,7 +35,6 @@ public class Health : MonoBehaviour
         GetComponent<SpriteRenderer>().color = color;
         yield return new WaitForSeconds(0.15f);
         GetComponent<SpriteRenderer>().color = Color.white;
-
     }
 
     public void Damage(int amount)

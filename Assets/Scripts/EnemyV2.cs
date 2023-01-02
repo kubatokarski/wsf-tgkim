@@ -6,6 +6,7 @@ public class EnemyV2 : MonoBehaviour
 {
     [SerializeField] private int damage = 5;
     [SerializeField] private float speed = 1.5f;
+    [SerializeField] private float speedVariation = 0.4f;
     [SerializeField] private EnemyDataV2 data;
 
     private GameObject player;
@@ -46,7 +47,7 @@ public class EnemyV2 : MonoBehaviour
     {
         GetComponent<Health>().SetHealth(data.hp, data.hp);
         damage = data.damage;
-        speed = data.speed;
+        speed = data.speed + data.speed * Random.Range(-speedVariation, speedVariation);
     }
 
 }

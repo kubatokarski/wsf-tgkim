@@ -42,7 +42,7 @@ public class EnemySpawnerV2 : MonoBehaviour
         float maxX = 12f;
         float maxY = 6f;
 
-        float currentInterval = interval + 1 + Random.Range(-intervalVariation, intervalVariation);
+        float currentInterval = interval + Random.Range(-intervalVariation, intervalVariation);
 
         yield return new WaitForSeconds(currentInterval);
 

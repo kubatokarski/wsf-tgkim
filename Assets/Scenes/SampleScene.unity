@@ -156,8 +156,8 @@ MonoBehaviour:
   enemyGoblinInterval: 1.8
   enemyGoblinSpawnAmount: 1
   enemyBatPrefab: {fileID: 4853244115531225651, guid: 025e4c321dbb848439bb5c8cd5ef4de8, type: 3}
-  enemyBatInterval: 1
-  enemyBatSpawnAmount: 3
+  enemyBatInterval: 1.4
+  enemyBatSpawnAmount: 2
   intervalVariation: 0.5
 --- !u!4 &75813935
 Transform:
@@ -457,6 +457,7 @@ GameObject:
   - component: {fileID: 438304226}
   - component: {fileID: 438304227}
   - component: {fileID: 438304228}
+  - component: {fileID: 438304230}
   - component: {fileID: 438304229}
   m_Layer: 0
   m_Name: Knight
@@ -621,6 +622,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 0.82}
   m_EdgeRadius: 0
+--- !u!114 &438304230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438304222}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5942d9bd446e54c50832d13adc26b4c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: {fileID: 75813933}
 --- !u!1 &490914948
 GameObject:
   m_ObjectHideFlags: 0
