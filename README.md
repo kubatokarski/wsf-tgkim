@@ -9,7 +9,8 @@
 2. [Pitch](https://github.com/kubatokarski/wsf-tgkim#pitch)
 3. [Storyboard](https://github.com/kubatokarski/wsf-tgkim#storyboard)
 4. [Źródła wiedzy](https://github.com/kubatokarski/wsf-tgkim#%C5%BAr%C3%B3d%C5%82a-wiedzy)
-5. [Narzędzia & Assety](https://github.com/kubatokarski/wsf-tgkim#narz%C4%99dzia--assety)
+5. [Showcase](https://github.com/kubatokarski/wsf-tgkim#showcase)
+6. [Narzędzia & Assety](https://github.com/kubatokarski/wsf-tgkim#narz%C4%99dzia--assety)
 
 # Lista wybranych 10 gier
 
@@ -252,11 +253,21 @@ Seria tutoriali, które teoretycznie przerabiają podstawy, ale robią to w duż
 
 ###  
 
+# Showcase
+###### 2023-01-07
+
+[![Screenshot from showcase build](./Docs/Showcase01/showcase_screen01.png)](https://www.youtube.com/watch?v=VPpNpo2Z1Cs)
+
+[**Recorder gameplay**](https://www.youtube.com/watch?v=VPpNpo2Z1Cs) – przygotowany na prezentację postępów nad projektem na przedostatnie zajęcia 7 stycznia 2023.
+
+###  
+
 # Narzędzia & Assety
 
-- [Markdown Editor](https://jbt.github.io/markdown-editor/) online'owy edytor Markdown z podglądem na żywo, który jest dużo bliższy temu jak github renderduje pliki README.md niż Dillinger.io
-- https://o-lobster.itch.io/simple-dungeon-crawler-16x16-pixel-pack
-- https://www.kenney.nl/assets
+- [**Markdown Editor**](https://jbt.github.io/markdown-editor/) online'owy edytor Markdown z podglądem na żywo, który jest dużo bliższy temu jak github renderduje pliki README.md niż Dillinger.io
+- [**Knight & Goblin**](https://o-lobster.itch.io/simple-dungeon-crawler-16x16-pixel-pack) from *Simple Dungeon Crawler 16x16 Pixel Art Asset Pack*
+- [**Bat**](https://drive.google.com/file/d/1yiC0bDLb_XA_uQYC2geV_pK1N_wIxVsh/view) from *Vampire Survivors in Unity Tutorial*
+- [**Kenney Assets**](https://www.kenney.nl/assets) bookmark for future asset research
 
 
 | [Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
