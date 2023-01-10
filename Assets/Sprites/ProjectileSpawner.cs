@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileSpawner : MonoBehaviour
 {
-    private float fireProjectileInterval = 1;
+    private float fireProjectileInterval = 2f;
     private GameObject playerCharacter;
     [SerializeField] private GameObject fireProjectile;
     [SerializeField] GameObject enemies;
@@ -44,13 +44,12 @@ public class ProjectileSpawner : MonoBehaviour
 
             closestEnemy = enemies.transform.GetChild(closestEnemyIndex);
 
-            Color color;
-            ColorUtility.TryParseHtmlString("#4CFFF6", out color);
-            enemies.transform.GetChild(closestEnemyIndex).GetComponent<SpriteRenderer>().color = color;
+            // DEBUG ONLY 
+            // Color color;
+            // ColorUtility.TryParseHtmlString("#4CFFF6", out color);
+            // enemies.transform.GetChild(closestEnemyIndex).GetComponent<SpriteRenderer>().color = color;
 
             closestEnemyDirection = (closestEnemy.position - playerCharacter.transform.position).normalized;
-
-            Debug.Log("Closest enemy index: " + closestEnemyIndex + "/" + enemiesCount + "), vector: " + closestEnemyDirection);
 
             GameObject newProjectile = Instantiate(fireProjectile, playerCharacter.transform.position, Quaternion.identity);
             FireProjectile newFireProjectile = newProjectile.GetComponent<FireProjectile>();
@@ -61,13 +60,6 @@ public class ProjectileSpawner : MonoBehaviour
 
             newProjectile.transform.parent = this.transform;
         }
-
-        /*
-        GameObject newProjectile = Instantiate(fireProjectile, playerCharacter.transform.position, Quaternion.identity);
-        FireProjectile newFireProjectile = newProjectile.GetComponent<FireProjectile>();
-        newFireProjectile.setDirection(closestEnemyDirection);
-        newProjectile.transform.parent = this.transform;
-        */
 
         yield return new WaitForSeconds(interval);
         StartCoroutine( spawnProjectile(interval) );
