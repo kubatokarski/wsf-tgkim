@@ -8,6 +8,7 @@ public class PlayerRangeAttack : MonoBehaviour
     private float timer = 0f;
 
     [SerializeField] GameObject enemies;
+    [SerializeField] FireProjectile projectile;
 
     void Start()
     {
@@ -17,12 +18,11 @@ public class PlayerRangeAttack : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        Transform closestEnemy;
 
         if(timer > timeToAttack)
         {
             timer = 0;
-
-            Debug.Log("Range Attack placeholder");
 
             int enemiesCount = enemies.transform.childCount;
             if (enemiesCount > 0) {
@@ -38,10 +38,14 @@ public class PlayerRangeAttack : MonoBehaviour
                         minDistance = dist;
                     }
                 }
+                closestEnemy = enemies.transform.GetChild(closestEnemyIndex);
 
-                enemies.transform.GetChild(closestEnemyIndex).GetComponent<SpriteRenderer>().color = Color.blue;
+                Color color;
+                ColorUtility.TryParseHtmlString("#4CFFF6", out color);
+                enemies.transform.GetChild(closestEnemyIndex).GetComponent<SpriteRenderer>().color = color;
+
+                Vector3 direction = (closestEnemy.position - this.transform.position).normalized;
             }
         }
-        
     }
 }
