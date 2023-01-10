@@ -260,6 +260,9 @@ Seria tutoriali, które teoretycznie przerabiają podstawy, ale robią to w duż
 
 [**Recorder gameplay**](https://www.youtube.com/watch?v=VPpNpo2Z1Cs) – przygotowany na prezentację postępów nad projektem na przedostatnie zajęcia 7 stycznia 2023.
 
+| [Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
+| --- |
+
 ###  
 
 # Narzędzia & Assety
