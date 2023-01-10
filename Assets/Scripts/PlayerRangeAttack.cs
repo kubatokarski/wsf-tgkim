@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerRangeAttack : MonoBehaviour
 {
-    private float timeToAttack = 2f;
-    private float timer = 0f;
+    //private float timeToAttack = 2f;
+    //private float timer = 0f;
 
     [SerializeField] GameObject enemies;
     [SerializeField] FireProjectile projectile;

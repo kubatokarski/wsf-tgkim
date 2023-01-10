@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FireProjectile : MonoBehaviour
 {
-    private Vector3 direction;
-    private float speed = 0.01f;
+    private Vector3 direction = new Vector3(0f, 5f);
+    //private float speed = 0.01f;
     
 
     private void Start()
@@ -20,6 +20,6 @@ public class FireProjectile : MonoBehaviour
 
     public void setDirection (Vector3 v)
     {
-        direction = v;
+        this.direction = v;
     }
 }

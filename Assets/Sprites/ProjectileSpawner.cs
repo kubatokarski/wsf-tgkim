@@ -48,15 +48,22 @@ public class ProjectileSpawner : MonoBehaviour
             ColorUtility.TryParseHtmlString("#4CFFF6", out color);
             enemies.transform.GetChild(closestEnemyIndex).GetComponent<SpriteRenderer>().color = color;
 
-            closestEnemyDirection = (closestEnemy.position - this.transform.position).normalized;
+            closestEnemyDirection = (closestEnemy.position - playerCharacter.transform.position).normalized;
 
-            Debug.Log("Closest enemy index: " + closestEnemyIndex + "/" + enemiesCount + ")");
+            Debug.Log("Closest enemy index: " + closestEnemyIndex + "/" + enemiesCount + "), vector: " + closestEnemyDirection);
+
+            GameObject newProjectile = Instantiate(fireProjectile, playerCharacter.transform.position, Quaternion.identity);
+            FireProjectile newFireProjectile = newProjectile.GetComponent<FireProjectile>();
+            newFireProjectile.setDirection(closestEnemyDirection);
+            newProjectile.transform.parent = this.transform;
         }
 
+        /*
         GameObject newProjectile = Instantiate(fireProjectile, playerCharacter.transform.position, Quaternion.identity);
-        newProjectile.transform.parent = this.transform;
         FireProjectile newFireProjectile = newProjectile.GetComponent<FireProjectile>();
         newFireProjectile.setDirection(closestEnemyDirection);
+        newProjectile.transform.parent = this.transform;
+        */
 
         yield return new WaitForSeconds(interval);
         StartCoroutine( spawnProjectile(interval) );
