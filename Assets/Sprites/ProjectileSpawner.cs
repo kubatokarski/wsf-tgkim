@@ -55,6 +55,10 @@ public class ProjectileSpawner : MonoBehaviour
             GameObject newProjectile = Instantiate(fireProjectile, playerCharacter.transform.position, Quaternion.identity);
             FireProjectile newFireProjectile = newProjectile.GetComponent<FireProjectile>();
             newFireProjectile.setDirection(closestEnemyDirection);
+
+            float angle = Vector2.SignedAngle(Vector2.down, closestEnemyDirection);
+            newProjectile.transform.eulerAngles = new Vector3(0, 0, angle);
+
             newProjectile.transform.parent = this.transform;
         }
 
