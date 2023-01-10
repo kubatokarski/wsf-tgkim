@@ -17,6 +17,7 @@ public class PlayerRangeAttack : MonoBehaviour
 
     void Update()
     {
+        /*
         timer += Time.deltaTime;
         Transform closestEnemy;
 
@@ -47,5 +48,6 @@ public class PlayerRangeAttack : MonoBehaviour
                 Vector3 direction = (closestEnemy.position - this.transform.position).normalized;
             }
         }
+        */
     }
 }

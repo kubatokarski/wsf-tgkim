@@ -8,34 +8,33 @@ public class ProjectileSpawner : MonoBehaviour
     private GameObject playerCharacter;
     [SerializeField] private GameObject fireProjectile;
     [SerializeField] GameObject enemies;
-
+    Vector3 closestEnemyDirection = new Vector3(0f, 0f);
 
     void Start()
     {
-        StartCoroutine( spawnProjectile( fireProjectileInterval, new Vector3(0f, 0f), new Vector3 (1f, 1f)) );
         playerCharacter = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine( spawnProjectile(fireProjectileInterval) );
     }
 
-
-    void Update()
+    private void FixedUpdate()
     {
         
     }
 
-
-    private IEnumerator spawnProjectile( float interval, Vector3 spawnPosition, Vector3 direction )
+    private IEnumerator spawnProjectile( float interval )
     {
         Transform closestEnemy;
         int enemiesCount = enemies.transform.childCount;
         if (enemiesCount > 0)
         {
-            Debug.Log("Finding closest enemy...");
-            float minDistance = Vector2.Distance(this.transform.position, enemies.transform.GetChild(0).transform.position);
+            float minDistance = Vector2.Distance(playerCharacter.transform.position, enemies.transform.GetChild(0).transform.position);
             int closestEnemyIndex = 0;
 
             for (var i = 1; i < enemiesCount; i++)
             {
-                float dist = Vector2.Distance(this.transform.position, enemies.transform.GetChild(i).transform.position);
+                float dist = Vector2.Distance(playerCharacter.transform.position, enemies.transform.GetChild(i).transform.position);
+                enemies.transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.white;
+
                 if (dist < minDistance)
                 {
                     closestEnemyIndex = i;
@@ -49,16 +48,17 @@ public class ProjectileSpawner : MonoBehaviour
             ColorUtility.TryParseHtmlString("#4CFFF6", out color);
             enemies.transform.GetChild(closestEnemyIndex).GetComponent<SpriteRenderer>().color = color;
 
-            Vector3 closestEnemyDirection = (closestEnemy.position - this.transform.position).normalized;
+            closestEnemyDirection = (closestEnemy.position - this.transform.position).normalized;
+
+            Debug.Log("Closest enemy index: " + closestEnemyIndex + "/" + enemiesCount + ")");
         }
 
-        yield return new WaitForSeconds(interval);
-        Debug.Log("spawning projectile");
         GameObject newProjectile = Instantiate(fireProjectile, playerCharacter.transform.position, Quaternion.identity);
         newProjectile.transform.parent = this.transform;
         FireProjectile newFireProjectile = newProjectile.GetComponent<FireProjectile>();
-        newFireProjectile.setDirection(new Vector3(1f, 1f, 0) );
-                
-        StartCoroutine( spawnProjectile(interval, spawnPosition, direction) );
+        newFireProjectile.setDirection(closestEnemyDirection);
+
+        yield return new WaitForSeconds(interval);
+        StartCoroutine( spawnProjectile(interval) );
     }
 }

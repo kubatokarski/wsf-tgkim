@@ -12,12 +12,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float enemyBatInterval;
     [SerializeField] private int enemyBatSpawnAmount;
 
-
     private int initialSpawnAmount = 3;
     [SerializeField] private float intervalVariation = 0.5f;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < initialSpawnAmount; i++)
@@ -29,11 +26,8 @@ public class EnemySpawner : MonoBehaviour
             spawnInitialEnemy(enemyBatPrefab);
         }
 
-        StartCoroutine(spawnEnemy(enemyGoblinInterval, enemyGoblinPrefab, enemyGoblinSpawnAmount));
-        StartCoroutine(spawnEnemy(enemyBatInterval, enemyBatPrefab, enemyBatSpawnAmount));
-        //StartCoroutine(spawnEnemy(bigSwarmerInterval, bigSwarmerPrefab));
-
-
+        //StartCoroutine(spawnEnemy(enemyGoblinInterval, enemyGoblinPrefab, enemyGoblinSpawnAmount));
+        //StartCoroutine(spawnEnemy(enemyBatInterval, enemyBatPrefab, enemyBatSpawnAmount));
     }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy, int amount)
