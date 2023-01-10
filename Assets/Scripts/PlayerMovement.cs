@@ -4,49 +4,49 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private float speed = 3f;
 
-    public float moveSpeed;
-    public Rigidbody2D rb;
-    [SerializeField] GameObject weapon;
-    private Vector2 movementVector;
-    [HideInInspector] public float lastHorizontalVector = 1;
-    [HideInInspector] public float lastVerticalVector;
+    private Rigidbody2D body;
+    private Vector2 axisMovement;
+    [SerializeField] Transform bar;
 
-    // Update is called once per frame
+    void Start()
+    {
+        body = GetComponent<Rigidbody2D>();
+    }
+
     void Update()
     {
-        // Input
-        movementVector.x = Input.GetAxisRaw("Horizontal");
-        movementVector.y = Input.GetAxisRaw("Vertical");
-
-        if( movementVector.x != 0 ) {
-            lastHorizontalVector = movementVector.x;
-        }
-        if( movementVector.y != 0 ) {
-            lastVerticalVector = movementVector.y;
-        }
+        axisMovement.x = Input.GetAxisRaw("Horizontal");
+        axisMovement.y = Input.GetAxisRaw("Vertical");
     }
 
-    // Default: 50 fps
-    void FixedUpdate ()
+    private void FixedUpdate()
     {
-        // Movement
-        rb.MovePosition(rb.position + movementVector * moveSpeed * Time.fixedDeltaTime);
-        
-        // TODO: change temp to something meaningful
-        float temp = Input.GetAxisRaw("Horizontal");
-        
-        Vector3 rotateWeapon;
-        if (temp < 0)
+        Move();
+    }
+
+    private void Move()
+    {
+        body.velocity = axisMovement.normalized * speed;
+        CheckForFlipping();
+    }
+
+    private void CheckForFlipping()
+    {
+        bool movingLeft = axisMovement.x < 0;
+        bool movingRight = axisMovement.x > 0;
+
+        if (movingLeft)
         {
-            rotateWeapon = new Vector3(0f, 180f, 0f); 
-            weapon.transform.eulerAngles = rotateWeapon;
+            transform.localScale = new Vector3(-1f, transform.localScale.y);
+            bar.localScale = new Vector3(-1f, bar.localScale.y);
         }
-        else if (temp >0)
+
+        if (movingRight)
         {
-            rotateWeapon = new Vector3(0f, 0f, 0f); 
-            weapon.transform.eulerAngles = rotateWeapon;
+            transform.localScale = new Vector3(1f, transform.localScale.y);
+            bar.localScale = new Vector3(1f, bar.localScale.y);
         }
     }
-    
 }

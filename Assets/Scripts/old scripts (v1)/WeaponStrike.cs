@@ -11,12 +11,12 @@ public class WeaponStrike : MonoBehaviour
     [SerializeField] GameObject WhipAttackL;
     [SerializeField] GameObject WhipAttackR;
 
-    PlayerMovement playerMovement;
+    PlayerMovementV1_Old playerMovement;
     [SerializeField] int axeDamage = 1;
 
     private void Awake ()
     {
-        playerMovement = GetComponentInParent<PlayerMovement>();
+        playerMovement = GetComponentInParent<PlayerMovementV1_Old>();
         playerMovement.lastHorizontalVector = 1;
         timer = timeToAttack;
     }
@@ -77,7 +77,7 @@ public class WeaponStrike : MonoBehaviour
             Enemy e = colliders[i].GetComponent<Enemy>();
             if(e != null)
             {
-                colliders[i].GetComponent<Enemy>().TakeDamage(axeDamage);
+                colliders[i].GetComponent<EnemyV1_Old>().TakeDamage(axeDamage);
             }
         }
     }

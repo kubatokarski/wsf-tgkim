@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawnerV2 : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject enemyGoblinPrefab;
     [SerializeField] private float enemyGoblinInterval;

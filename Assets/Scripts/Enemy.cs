@@ -1,62 +1,53 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    Transform targetDestination;
-    [SerializeField] float speed;
-    GameObject targetGameObject;
-    Character targetCharacter;
-    Rigidbody2D rb;
-    [SerializeField] int hp = 1;
-    [SerializeField] int damage = 1;
+    [SerializeField] private int damage = 5;
+    [SerializeField] private float speed = 1.5f;
+    [SerializeField] private float speedVariation = 0.4f;
+    [SerializeField] private EnemyData data;
 
+    private GameObject player;
 
-    private void Awake()
+    void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        //targetGameObject = targetDestination.gameObject;
-        speed = UnityEngine.Random.Range(0.3f, 1.2f);
+        player = GameObject.FindGameObjectWithTag("Player");
+        SetEnemyValues();
     }
 
-    public void SetTarget(GameObject target)
+    void Update()
     {
-        targetGameObject = target;
-        targetDestination = target.transform;
+        Swarm();        
     }
 
-    private void FixedUpdate() 
+    private void Swarm()
     {
-        Vector2 direction = (targetDestination.position - transform.position).normalized;
-        rb.velocity = direction * speed;
-    }
-
-    void OnCollisionStay2D(Collision2D collision)
-    {    
-        if(collision.gameObject == targetGameObject) {
-            Attack();
-        }
-    }
-
-    private void Attack()
-    {
-        if(targetCharacter == null)
+        if(player != null)
         {
-            targetCharacter = targetGameObject.GetComponent<Character>();
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
-
-        targetCharacter.TakeDamage(damage);
     }
 
-    public void TakeDamage (int damage) 
+    private void OnTriggerEnter2D(Collider2D collider)
+    //private void OnTriggerStay2D(Collider2D collider)
     {
-        hp -= damage;
-        
-        if (hp < 1)
+        if(collider.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            if(collider.GetComponent<Health>() != null)
+            {
+                collider.GetComponent<Health>().Damage(damage);
+                //this.GetComponent<Health>().Damage(10000);
+            }
         }
     }
+
+    private void SetEnemyValues()
+    {
+        GetComponent<Health>().SetHealth(data.hp, data.hp);
+        damage = data.damage;
+        speed = data.speed + data.speed * Random.Range(-speedVariation, speedVariation);
+    }
+
 }
