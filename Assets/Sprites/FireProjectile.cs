@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class FireProjectile : MonoBehaviour
 {
-    private Vector3 direction = new Vector3(0f, 5f);
-    //private float speed = 0.01f;
-    
+    private Vector3 direction;
+    private GameObject playerCharacter;
 
     private void Start()
     {
@@ -15,7 +14,6 @@ public class FireProjectile : MonoBehaviour
     private void FixedUpdate()
     {
         this.transform.position += direction * 0.05f;
-        //this.transform.position += new Vector3(0.05f, 0.05f);
     }
 
     public void setDirection (Vector3 v)
@@ -23,14 +21,24 @@ public class FireProjectile : MonoBehaviour
         this.direction = v;
     }
 
+    public void setPlayerCharacter(GameObject pc)
+    {
+        this.playerCharacter = pc;
+    }
+
     private int damage = 4;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.GetComponent<Health>() != null)
+        if (collider.GetComponent<Health>() != null && collider.tag != "Player")
         {
             Health health = collider.GetComponent<Health>();
             health.Damage(damage);
         }
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }

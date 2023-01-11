@@ -26,8 +26,8 @@ public class EnemySpawner : MonoBehaviour
             spawnInitialEnemy(enemyBatPrefab);
         }
 
-        //StartCoroutine(spawnEnemy(enemyGoblinInterval, enemyGoblinPrefab, enemyGoblinSpawnAmount));
-        //StartCoroutine(spawnEnemy(enemyBatInterval, enemyBatPrefab, enemyBatSpawnAmount));
+        StartCoroutine(spawnEnemy(enemyGoblinInterval, enemyGoblinPrefab, enemyGoblinSpawnAmount));
+        StartCoroutine(spawnEnemy(enemyBatInterval, enemyBatPrefab, enemyBatSpawnAmount));
     }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy, int amount)

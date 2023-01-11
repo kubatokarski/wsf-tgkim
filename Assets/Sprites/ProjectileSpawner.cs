@@ -9,6 +9,7 @@ public class ProjectileSpawner : MonoBehaviour
     [SerializeField] private GameObject fireProjectile;
     [SerializeField] GameObject enemies;
     Vector3 closestEnemyDirection = new Vector3(0f, 0f);
+    private float projectileSpawnOffset = 0.5f;
 
     void Start()
     {
@@ -16,16 +17,14 @@ public class ProjectileSpawner : MonoBehaviour
         StartCoroutine( spawnProjectile(fireProjectileInterval) );
     }
 
-    private void FixedUpdate()
-    {
-        
-    }
 
     private IEnumerator spawnProjectile( float interval )
     {
+        yield return new WaitForSeconds(interval);
+
         Transform closestEnemy;
         int enemiesCount = enemies.transform.childCount;
-        if (enemiesCount > 0)
+        if (enemiesCount > 0 && playerCharacter)
         {
             float minDistance = Vector2.Distance(playerCharacter.transform.position, enemies.transform.GetChild(0).transform.position);
             int closestEnemyIndex = 0;
@@ -52,8 +51,10 @@ public class ProjectileSpawner : MonoBehaviour
             closestEnemyDirection = (closestEnemy.position - playerCharacter.transform.position).normalized;
 
             GameObject newProjectile = Instantiate(fireProjectile, playerCharacter.transform.position, Quaternion.identity);
+            newProjectile.transform.position += closestEnemyDirection * projectileSpawnOffset;
             FireProjectile newFireProjectile = newProjectile.GetComponent<FireProjectile>();
             newFireProjectile.setDirection(closestEnemyDirection);
+            newFireProjectile.setPlayerCharacter(playerCharacter);
 
             float angle = Vector2.SignedAngle(Vector2.down, closestEnemyDirection);
             newProjectile.transform.eulerAngles = new Vector3(0, 0, angle);
@@ -61,7 +62,6 @@ public class ProjectileSpawner : MonoBehaviour
             newProjectile.transform.parent = this.transform;
         }
 
-        yield return new WaitForSeconds(interval);
         StartCoroutine( spawnProjectile(interval) );
     }
 }
