@@ -6,6 +6,8 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int health = 1;
     [SerializeField] StatusBar hpBar;
+    [SerializeField] private GameObject healthPickup;
+
 
     private int MAX_HEALTH = 40;
 
@@ -76,18 +78,33 @@ public class Health : MonoBehaviour
         {
             this.health += amount;
         }
-    }
+        this.hpBar.SetState(this.health, this.MAX_HEALTH);
+       }
 
     private void Die()
     {
+        /*
         Character c = this.GetComponent<Character>();
         if(c)
         {
-            Debug.Log("Player killed!");
-        } else
-        {
-            Debug.Log("Enemy killed!");
+            // Player Character
         }
+        else
+        {
+            // Enemy
+
+            float healthPickupChance = 0.5f;
+            float rand = Random.value;
+            if(rand<healthPickupChance)
+            {
+                Debug.Log( rand + " health pickup! " + healthPickup);
+                GameObject newPickup = Instantiate(healthPickup, new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
+            }
+            else
+            {
+                //Debug.Log( rand );
+            }
+        }*/
         Destroy(gameObject);
     }
 }

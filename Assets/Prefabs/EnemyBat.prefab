@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4853244115531225660}
   - component: {fileID: 4853244115531225657}
   - component: {fileID: 5434376458171965597}
+  - component: {fileID: 2747494318149044399}
   m_Layer: 0
   m_Name: EnemyBat
   m_TagString: Untagged
@@ -124,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   hpBar: {fileID: 0}
+  healthPickup: {fileID: 0}
 --- !u!61 &4853244115531225660
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -186,3 +188,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &2747494318149044399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4853244115531225651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb810560441614ba0aea950fb778d25c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPickup: {fileID: 5532646603995229981, guid: 59cdad35e22b14387861c460a8926606, type: 3}
+  chanceToSpawn: 0.05
