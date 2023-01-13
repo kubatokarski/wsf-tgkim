@@ -49,6 +49,11 @@ public class ProjectileSpawner : MonoBehaviour
             // enemies.transform.GetChild(closestEnemyIndex).GetComponent<SpriteRenderer>().color = color;
 
             closestEnemyDirection = (closestEnemy.position - playerCharacter.transform.position).normalized;
+            if(closestEnemyDirection.sqrMagnitude == 0)
+            {
+                closestEnemyDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+                closestEnemyDirection.Normalize();
+            }
 
             GameObject newProjectile = Instantiate(fireProjectile, playerCharacter.transform.position, Quaternion.identity);
             newProjectile.transform.position += closestEnemyDirection * projectileSpawnOffset;
