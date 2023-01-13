@@ -80,6 +80,14 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        Character c = this.GetComponent<Character>();
+        if(c)
+        {
+            Debug.Log("Player killed!");
+        } else
+        {
+            Debug.Log("Enemy killed!");
+        }
         Destroy(gameObject);
     }
 }
