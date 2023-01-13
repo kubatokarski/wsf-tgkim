@@ -201,4 +201,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPickup: {fileID: 5532646603995229981, guid: 59cdad35e22b14387861c460a8926606, type: 3}
-  chanceToSpawn: 0.05
+  chanceToSpawn: 0.01
