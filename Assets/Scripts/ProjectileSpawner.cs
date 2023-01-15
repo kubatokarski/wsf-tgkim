@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileSpawner : MonoBehaviour
 {
-    private float fireProjectileInterval = 2f;
+    private float fireProjectileInterval = 3f;
     private GameObject playerCharacter;
     [SerializeField] private GameObject fireProjectile;
     [SerializeField] GameObject enemies;

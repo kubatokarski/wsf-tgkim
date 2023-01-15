@@ -32,10 +32,11 @@ public class Health : MonoBehaviour
         this.health = health;
     }
 
-    private IEnumerator VisualIndicator(Color color)
+    private IEnumerator VisualIndicator(Color color, float t)
     {
         GetComponent<SpriteRenderer>().color = color;
-        yield return new WaitForSeconds(0.15f);
+        //yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(t);
         GetComponent<SpriteRenderer>().color = Color.white;
     }
 
@@ -52,7 +53,7 @@ public class Health : MonoBehaviour
             //this.hpBar.SetState(this.health, this.MAX_HEALTH, this.transform.localScale.x);
             this.hpBar.SetState(this.health, this.MAX_HEALTH);
         }
-        StartCoroutine(VisualIndicator(Color.red));
+        StartCoroutine(VisualIndicator(Color.red, 0.2f));
 
         if(health <= 0)
         {
@@ -68,7 +69,7 @@ public class Health : MonoBehaviour
         }
 
         bool wouldBeOverMaxHealth = health + amount > MAX_HEALTH;
-        StartCoroutine(VisualIndicator(Color.green));
+        StartCoroutine(VisualIndicator(Color.green, 0.5f));
 
         if (wouldBeOverMaxHealth)
         {
