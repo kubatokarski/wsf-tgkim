@@ -13,7 +13,7 @@ public class PickUpExp : MonoBehaviour
 
         if (c)
         {
-            c.addExperience(expAmount);
+            c.AddExperience(expAmount);
             Destroy(gameObject);
         }
     }

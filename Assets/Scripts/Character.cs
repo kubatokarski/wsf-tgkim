@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
     {
         get
         {
-            return level * 10;
+            return level * 50;
         }
     }
 
