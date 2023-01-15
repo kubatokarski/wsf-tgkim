@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Character : MonoBehaviour
 {
     private int level = 1;
     private int experience = 0;
+
+    [SerializeField] private TextMeshProUGUI levelElement;
+    [SerializeField] private TextMeshProUGUI experienceElement;
+
 
     private int TO_LEVEL_UP
     {
@@ -31,7 +36,8 @@ public class Character : MonoBehaviour
     {
         experience += amount;
         CheckLevelUp();
-        Debug.Log("Experience: " + experience);
+        //Debug.Log("Experience: " + experience);
+        experienceElement.text = "EXP: " + experience;
     }
 
     public void CheckLevelUp()
@@ -40,7 +46,9 @@ public class Character : MonoBehaviour
         {
             experience -= TO_LEVEL_UP;
             level += 1;
-            Debug.Log("Level Up! Now " + level);
+            //Debug.Log("Level Up! Now " + level);
+            levelElement.text = "LEVEL: " + level;
+            this.GetComponent<Health>().IncreaseHealth(10);
         }
 
     }

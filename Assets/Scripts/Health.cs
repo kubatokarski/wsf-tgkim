@@ -7,35 +7,26 @@ public class Health : MonoBehaviour
     [SerializeField] private int health = 1;
     [SerializeField] StatusBar hpBar;
     [SerializeField] private GameObject healthPickup;
+    [SerializeField] private GameTimer gameTimer;
 
 
     private int MAX_HEALTH = 40;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            //Damage(10);
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Heal(10);
-        }
-
-    }
-
     public void SetHealth(int maxHealth, int health)
     {
-        //this.MAX_HEALTH = maxHealth;
-        this.MAX_HEALTH = health;
+        this.MAX_HEALTH = maxHealth;
         this.health = health;
+    }
+
+    public void IncreaseHealth(int amount)
+    {
+        this.MAX_HEALTH += amount;
+        this.health += amount;
     }
 
     private IEnumerator VisualIndicator(Color color, float t)
     {
         GetComponent<SpriteRenderer>().color = color;
-        //yield return new WaitForSeconds(0.15f);
         yield return new WaitForSeconds(t);
         GetComponent<SpriteRenderer>().color = Color.white;
     }
@@ -50,7 +41,6 @@ public class Health : MonoBehaviour
         this.health -= amount;
         if(this.hpBar != null)
         {
-            //this.hpBar.SetState(this.health, this.MAX_HEALTH, this.transform.localScale.x);
             this.hpBar.SetState(this.health, this.MAX_HEALTH);
         }
         StartCoroutine(VisualIndicator(Color.red, 0.2f));
@@ -84,28 +74,13 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        /*
         Character c = this.GetComponent<Character>();
         if(c)
         {
             // Player Character
+            gameTimer.gameOver = true;
         }
-        else
-        {
-            // Enemy
 
-            float healthPickupChance = 0.5f;
-            float rand = Random.value;
-            if(rand<healthPickupChance)
-            {
-                Debug.Log( rand + " health pickup! " + healthPickup);
-                GameObject newPickup = Instantiate(healthPickup, new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
-            }
-            else
-            {
-                //Debug.Log( rand );
-            }
-        }*/
         Destroy(gameObject);
     }
 }
