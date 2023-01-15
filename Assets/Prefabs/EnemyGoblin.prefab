@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4853244115531225660}
   - component: {fileID: 4853244115531225657}
   - component: {fileID: 8598870933563583859}
+  - component: {fileID: 8956506839712131228}
   m_Layer: 0
   m_Name: EnemyGoblin
   m_TagString: Untagged
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 79fad954a16904a5480bfb26947211e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -181,3 +182,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPickup: {fileID: 5532646603995229981, guid: 59cdad35e22b14387861c460a8926606, type: 3}
   chanceToSpawn: 0.05
+--- !u!114 &8956506839712131228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4853244115531225651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb810560441614ba0aea950fb778d25c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPickup: {fileID: 6635542913115635476, guid: 487099326ec6a471cbe98c07292d50d4, type: 3}
+  chanceToSpawn: 0.25
