@@ -32,13 +32,14 @@ public class ProjectileSpawner : MonoBehaviour
             for (var i = 1; i < enemiesCount; i++)
             {
                 float dist = Vector2.Distance(playerCharacter.transform.position, enemies.transform.GetChild(i).transform.position);
-                enemies.transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.white;
 
                 if (dist < minDistance)
                 {
                     closestEnemyIndex = i;
                     minDistance = dist;
                 }
+
+                enemies.transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.white;
             }
 
             closestEnemy = enemies.transform.GetChild(closestEnemyIndex);

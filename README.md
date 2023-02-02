@@ -9,8 +9,10 @@
 2. [Pitch](https://github.com/kubatokarski/wsf-tgkim#pitch)
 3. [Storyboard](https://github.com/kubatokarski/wsf-tgkim#storyboard)
 4. [Źródła wiedzy](https://github.com/kubatokarski/wsf-tgkim#%C5%BAr%C3%B3d%C5%82a-wiedzy)
-5. [Showcase](https://github.com/kubatokarski/wsf-tgkim#showcase)
-6. [Narzędzia & Assety](https://github.com/kubatokarski/wsf-tgkim#narz%C4%99dzia--assety)
+5. [Showcase #1](https://github.com/kubatokarski/wsf-tgkim#showcase-1)
+6. [Showcase #2](https://github.com/kubatokarski/wsf-tgkim#showcase-2)
+7. [Narzędzia & Assety](https://github.com/kubatokarski/wsf-tgkim#narz%C4%99dzia--assety)
+8. [Post Mortem](https://github.com/kubatokarski/wsf-tgkim#post-mortem)
 
 # Lista wybranych 10 gier
 
@@ -253,12 +255,24 @@ Seria tutoriali, które teoretycznie przerabiają podstawy, ale robią to w duż
 
 ###  
 
-# Showcase
+# Showcase #1
 ###### 2023-01-07
 
 [![Screenshot from showcase build](./Docs/Showcase01/showcase_screen01.png)](https://www.youtube.com/watch?v=VPpNpo2Z1Cs)
 
 [**Recorder gameplay**](https://www.youtube.com/watch?v=VPpNpo2Z1Cs) – przygotowany na prezentację postępów nad projektem na przedostatnie zajęcia 7 stycznia 2023.
+
+| [Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
+| --- |
+
+###  
+
+# Showcase #2
+###### 2023-02-03
+
+[![Screenshot from showcase build](./Docs/Showcase02/showcase02_screen01.png)](https://youtu.be/J97L7zswziE)
+
+[**Recorder gameplay**](https://youtu.be/J97L7zswziE) – przygotowany na prezentację projektu na ostatnie zajęcia 2 lutego 2023.
 
 | [Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
@@ -271,9 +285,27 @@ Seria tutoriali, które teoretycznie przerabiają podstawy, ale robią to w duż
 - [**Knight & Goblin**](https://o-lobster.itch.io/simple-dungeon-crawler-16x16-pixel-pack) from *Simple Dungeon Crawler 16x16 Pixel Art Asset Pack*
 - [**Bat**](https://drive.google.com/file/d/1yiC0bDLb_XA_uQYC2geV_pK1N_wIxVsh/view) from *Vampire Survivors in Unity Tutorial*
 - [**Kenney Assets**](https://www.kenney.nl/assets) bookmark for future asset research
+- [**Quaternius Assets**](https://quaternius.com/) bookmark for future asset research
 
 
 | [Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
 | --- |
 
 ###  
+
+# Post Mortem
+
+**Kilka wniosków i przemyśleń które się pojawiły w trakcie tego projektu**:
+- wyszedłem ze swojej strefy komfortu, spróbowałem Unity i tradycyjnego, „tekstowego” kodowania – przeżyłem, chociaż były momenty zwątpienia i nierównej walki, ale była to fajna przygoda oraz mnóstwo nauki i doświadczenia, które udało się przyswoić
+- złośliwość rzeczy martwych, bugi w kodzie, których rozwiązanie potrafi zająć długie godziny a czasami wieczory, nagłe pożary w pracy, kumulacje projektów, choroby, nieplanowane remonty i inne nieprzewidziane sytuacje – słowem „samo życie” dobitnie uczą, aby na przyszłość **zakładać 2-3x większy margines czasowy** na zapas niż do tej pory
+- GitHub, czy ogólniej w ogóle **kontrola wersji**, która początkowo wyglądała na coś zbędnego, upierdilwego i skomplikowanego w praktyce okazuje się rzeczywiście przydatna, praktyczna i można ją polubić
+- nie bać się sięgać do różnych źródeł wiedzy
+- nie bać się porzucać źródła wiedzy, które początkowo obiecują dużo, ale okazują się kiepskiej, wątpliwej jakości (jak np. [~~„**Vampire Survivors in Unity Tutorial**” by Greg Dev Stuff~~](https://www.youtube.com/playlist?list=PL0GUZtUkX6t7zQEcvKtdc0NvjVuVcMe6U) – bardzo nie polecam)
+- szukać źródeł wiedzy które oferują nie tylko **jak coś zrobić**, lepiej takich, które pokazują **jak robić i dlaczego tak**, a w ogóle najlepiej takich, które pokazują **jak zrobić, dlaczego tak i jak to zrobić poprawnie, profesjonalnie**, zgodnie ze standardami i dobrymi praktykami
+- lepiej nauczyć się mniej, ale poprawnie i dogłębnie, z pełnym zrozumieniem co się dzieje, niż teoretycznie więcej, ale pobieżnie, ze złymi rozwiązaniami i praktykami (chyba?)
+- coś co zostanie za mną już na zawsze, co zabrało bezpowrotnie kilka godzin życia i przysporzyło paru siwych włosów: `onTriggerEnter2D` to nie to samo co `OnTriggerEnter2D`...
+- **WNIOSEK**: najlepiej byłoby cofnąć się w czasie do początku semestru, ale zachowując wszystko czego udało się nauczyć, zabrać ze sobą kurs [**Learn Unity Beginner/Intermediate 2023**](https://www.youtube.com/watch?v=AmGSEH7QcDg) by *Code Monkey*, który ukazał się dopiero 4 dni temu i przygotować projekt jeszcze raz, od nowa, według tego kursu 😆
+
+
+| [Powrót do góry](https://github.com/kubatokarski/wsf-tgkim#tworzenie-gier-komputerowych-i-mobilnych) |
+| --- |
